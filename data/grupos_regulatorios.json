@@ -1,0 +1,225 @@
+{
+  "grupo_41_pies": {
+    "estados": [
+      "Alabama",
+      "Alaska",
+      "Arizona",
+      "Arkansas",
+      "Colorado",
+      "Delaware",
+      "Florida",
+      "Georgia",
+      "Hawaii",
+      "Idaho",
+      "Iowa",
+      "Kansas",
+      "Kentucky",
+      "Louisiana",
+      "Maryland",
+      "Massachusetts",
+      "Michigan",
+      "Mississippi",
+      "Missouri",
+      "Montana",
+      "Nebraska",
+      "Nevada",
+      "New Hampshire",
+      "New Jersey",
+      "New Mexico",
+      "North Carolina",
+      "North Dakota",
+      "Ohio",
+      "Oklahoma",
+      "Oregon",
+      "Pennsylvania",
+      "Rhode Island",
+      "South Carolina",
+      "South Dakota",
+      "Tennessee",
+      "Texas",
+      "Utah",
+      "Vermont",
+      "Virginia",
+      "Washington",
+      "West Virginia",
+      "Wyoming"
+    ],
+    "criterio_comun": "Limite de 41 pies entre kingpin y eje/grupo de ejes trasero para semirremolque estandar (Dry Van / Reefer 53' OTR) en combinacion tractocamion-semirremolque. Eje de agrupacion PRINCIPAL: valor numerico unicamente (decision del usuario, mantenida); la condicion de aplicacion (statewide vs. National Network vs. Interstate/rutas designadas) NO separa grupos. Excepciones por tipo de carga (motorsports, ganado, car haulers) quedan fuera del alcance por resolucion previa del Coordinador. Grupo dominante: 42 de los 50 estados del alcance (84%).",
+    "distribucion_por_medida": {
+      "KPRA": [],
+      "KCRT": [
+        "Alabama",
+        "Alaska",
+        "Arizona",
+        "Arkansas",
+        "Colorado",
+        "Delaware",
+        "Florida",
+        "Georgia",
+        "Hawaii",
+        "Idaho",
+        "Iowa",
+        "Kansas",
+        "Kentucky",
+        "Louisiana",
+        "Maryland",
+        "Massachusetts",
+        "Michigan",
+        "Mississippi",
+        "Missouri",
+        "Montana",
+        "Nebraska",
+        "Nevada",
+        "New Hampshire",
+        "New Jersey",
+        "New Mexico",
+        "North Carolina",
+        "North Dakota",
+        "Ohio",
+        "Oklahoma",
+        "Oregon",
+        "Pennsylvania",
+        "Rhode Island",
+        "South Carolina",
+        "South Dakota",
+        "Tennessee",
+        "Texas",
+        "Utah",
+        "Vermont",
+        "Virginia",
+        "Washington",
+        "West Virginia",
+        "Wyoming"
+      ],
+      "N/A": [],
+      "conteo": "KPRA 0 | KCRT 42 | N/A 0"
+    },
+    "excepciones": [
+      "DISTRIBUCION POR TIPO DE MEDIDA: el grupo es 100% KCRT (42 de 42). Ningun estado de 41 pies mide al eje individual mas posterior (KPRA). Es el unico grupo numerico del pais con homogeneidad total de medida, y esa homogeneidad es lo que hace que los 41 pies sean realmente comparables entre si: en todos los casos la cifra se toma al centro del tandem/grupo de ejes traseros.",
+      "ORIGEN DE LA UNANIMIDAD KCRT -- ADVERTENCIA DE LECTURA: en 29 de los 42 estados (los 28 del piso federal mas Wyoming) la etiqueta KCRT no proviene de un texto estatal, sino de aplicar la definicion condicional de 23 CFR Sec. 658.19 ('center of the rear axle, if single, or the center of a group of rear axles') al alcance del proyecto (eje tandem estandar). Si el alcance cambiara a semirremolque de eje trasero SENCILLO, esos 29 estados pasarian a KPRA por la misma norma. La unanimidad KCRT del grupo es en gran parte consecuencia del alcance definido, no de 42 decisiones regulatorias independientes. West Virginia es un caso adicional distinto (ver mas abajo): su KCRT proviene de una decision de clasificacion del usuario, no de su texto estatal ni de la regla federal.",
+      "TRES ORIGENES NORMATIVOS DEL MISMO 41. (A) 12 estados con ESTATUTO O REGLAMENTO ESTATAL PROPIO que codifica la medida kingpin-eje trasero en 41 pies: Florida, Pennsylvania, North Carolina, New Jersey, Tennessee, Virginia, Alabama, New Hampshire, South Carolina, Kentucky, Maryland, Vermont. (B) 28 estados SIN medida propia a nivel estatal, a los que se aplico de forma uniforme el PISO FEDERAL de 41 pies (23 CFR Sec. 658.19): Texas, Ohio, Georgia, Michigan, Missouri, Alaska, Arizona, Arkansas, Colorado, Delaware, Hawaii, Idaho, Iowa, Kansas, Louisiana, Massachusetts, Mississippi, Montana, Nebraska, Nevada, New Mexico, North Dakota, Oklahoma, Oregon, Rhode Island, South Dakota, Utah, Washington. (C) 2 estados ASIGNADOS AL CASO GENERAL DEL PROYECTO tras descartar su dato original, por decision expresa del usuario (2026-09-18): Wyoming y West Virginia. Para los grupos (B) y (C) el 41 no es una eleccion regulatoria del estado; un lector del informe NO debe interpretarlos como 'el estado fija 41 pies'.",
+      "West Virginia -- INCORPORACION NUEVA A ESTE GRUPO (2026-09-18), CATEGORIA (C), DISTINTA DE WYOMING. Sale de 'atipicos' por decision expresa del usuario. Su dato original era 37 pies (WV Code Sec. 17C-17-4), pero medía un CONCEPTO DISTINTO: 'axle spacing... between the rear axle of the truck tractor and the front axle of the semitrailer' (espaciamiento eje trasero del tractor - eje delantero del semirremolque), no una distancia kingpin-a-eje-trasero. Por eso no era comparable numericamente con el resto del dataset y estaba clasificado como medida 'N/A'. Por decision del usuario se le asigna el caso general del proyecto: 41 pies KCRT. El dato original queda preservado en el campo 'dato_original_no_clasificable' de su entrada, pero ya no es el dato activo.",
+      "DISTINCION CRITICA WEST VIRGINIA vs. WYOMING (documentar explicitamente en el informe final, por indicacion del usuario): aunque ambos llegan a 41 pies por asignacion y no por hallazgo, el motivo del descarte es OPUESTO en calidad de dato. (1) WYOMING: su dato original (40' tandem / 38' eje sencillo) NO TENIA RESPALDO TEXTUAL CONFIRMABLE -- el texto de Wyo. Stat. 31-18-802 no contiene esas cifras, los PDFs de WYDOT no se pudieron decodificar y los valores solo aparecian en agregadores no oficiales. Se descarto por FALTA DE FUENTE. (2) WEST VIRGINIA: su dato original (37 pies) SI ESTABA BIEN CONFIRMADO -- texto estatal legible (WV Code Sec. 17C-17-4) MAS segunda fuente de agencia distinta (WV DOT, 'Legal Size and Weight Limits', que reproduce 'measurement from tractor rear axle to trailer first axle cannot exceed 37 feet'). Se reclasifico por DECISION EXPRESA DEL USUARIO sobre como tratar una medida de concepto distinto dentro del proyecto, NO por debilidad de la fuente. En terminos practicos: el 41 de Wyoming tapa un vacio de informacion; el 41 de West Virginia sustituye informacion valida pero no comparable.",
+      "West Virginia -- ADVERTENCIA SOBRE SU CAMPO 'confianza': su entrada conserva 'confianza': 'verificado' con segunda fuente de auditor, pero esa verificacion respalda el dato ORIGINAL de 37 pies, no el valor activo de 41 pies KCRT, que no tiene fuente que lo afirme para West Virginia. Es el unico miembro del grupo cuya etiqueta 'verificado' no cubre el numero que efectivamente lo situa aqui. No se altera el campo (el archivo de origen no se modifica); se documenta para que Redaccion no presente West Virginia como '41 pies verificados con doble fuente'.",
+      "Wyoming -- CATEGORIA (C): asignacion por defecto tras descarte por falta de respaldo textual (ver 'dato_original_no_confirmado' en su entrada). No existe fuente que afirme '41 pies en Wyoming', solo ausencia de fuente que afirme otra cosa. Conserva 'confianza': 'alta' y 'fuente_unica': true.",
+      "CONSECUENCIA DE LA ENTRADA DE WEST VIRGINIA SOBRE LA COMPARABILIDAD GLOBAL: con este cambio desaparece del dataset activo el unico estado con medida 'N/A'. Los 50 estados quedan expresados en una magnitud homogenea (kingpin-a-eje/grupo trasero), por lo que una tabla comparativa de los 50 ya no mezcla magnitudes distintas. Pero esa homogeneidad se logro por RECLASIFICACION, no por nueva evidencia: la regulacion realmente vigente en West Virginia sigue expresandose como espaciamiento tractor-semirremolque de 37 pies.",
+      "MEDIDA CONDICIONAL EN LOS ESTADOS CON TEXTO PROPIO: entre los 12 estados del subgrupo (A), la mayoria usa una formula CONDICIONAL identica en estructura a la federal (eje unico -> KPRA; tandem/grupo -> KCRT): Florida, Pennsylvania, North Carolina, New Jersey, Tennessee, Virginia, Alabama, New Hampshire, South Carolina. Solo dos son KCRT INEQUIVOCO (miden siempre al tandem/grupo, sin variante de eje unico): Maryland ('center of the rear tandem axles') y Vermont ('center of the rearmost axle group').",
+      "Kentucky -- KCRT INFERIDO, NO TEXTUAL: 603 KAR 5:250 Sec. 6(4) dice solo 'measured to the center of the rear axle' y no distingue eje unico de tandem. Su campo 'medida_confianza' lo declara 'inferida (no textual directa) por remision explicita a 23 CFR 658' (la Seccion 2 del mismo reglamento remite al 23 CFR Part 658). Es el unico estado del subgrupo (A) cuya clasificacion KCRT descansa en una remision normativa y no en su propio texto; ademas es 'alta' + 'fuente_unica': true. Anade un limite de rear overhang de 5 pies, unico del grupo.",
+      "Tennessee -- LIMITES NUMERICOS DISTINTOS SEGUN LA MEDIDA: unico estado del grupo donde el tipo de medida cambia tambien la CIFRA: 41 pies KCRT con eje tandem, pero 44 pies KPRA con eje sencillo (T.C.A. Sec. 55-7-201(c)). Pertenece a este grupo por su valor KCRT (41'), que es el del alcance del proyecto. Su variante KPRA de 44 pies no tiene equivalente en ningun otro estado y no forma grupo. Mismo criterio de descarte de variante de eje sencillo que ahora se aplica tambien a California.",
+      "Virginia: unico del grupo con confirmacion explicita de segunda fuente (VA DMV, publicacion DMV 109) de que los 41 pies aplican tanto en interestatales/designadas como en no-designadas. Caso mas 'puro' del criterio.",
+      "Florida, Pennsylvania, North Carolina, South Carolina: 41 pies caso general, con excepcion estatutaria de 46 pies para transporte de vehiculos en eventos de motorsports (fuera de alcance).",
+      "New Jersey: 41 pies para motor-drawn vehicle de mas de 48 y hasta 53 pies, con exclusion de car haulers (49 U.S.C. 31111). Una fuente secundaria sugiere restriccion a Interestatales/designadas, no confirmada contra texto oficial; por el eje numerico, no afecta su pertenencia.",
+      "Alabama: 41 pies para semirremolques de mas de 53 pies 6 pulgadas en autopistas designadas conforme a Sec. 32-9-1 (National Network), con requisito de rear underride guard. La duda sobre auto-transporters/stinger-steered quedo cerrada por el usuario sin cambiar el dato.",
+      "Kentucky, Maryland, Vermont, Wyoming: 'confianza': 'alta' con 'fuente_unica': true (el Auditor agoto las vias razonables de segunda fuente en los cuatro casos).",
+      "Iowa: entra por la via del piso federal (subgrupo B). El Auditor confirmo que el texto vigente de Iowa Code 321.457 no contiene medida kingpin-eje (la cifra historica de 40 pies, creada por House File 747 de 1980, fue derogada entre 1980 y 2009). Su valor historico derogado lo habria colocado junto a California; se usa el tratamiento vigente.",
+      "New York, Indiana, Connecticut, Minnesota y Wisconsin quedan fuera de este grupo por valor numerico distinto (43 pies), no por su tipo de medida ni por su condicion de red designada."
+    ],
+    "revision_coordinador": false,
+    "motivo_revision_coordinador": "TRES PUNTOS DE LECTURA (ninguno reabre el eje numerico ni las decisiones ya tomadas por el usuario): (1) La caracterizacion '100% KCRT' es solida solo bajo el alcance actual (eje tandem estandar): 29 de los 42 estados son KCRT por aplicacion de la regla condicional federal a ese alcance, no por texto estatal. (2) Kentucky es el unico miembro del subgrupo con texto propio cuyo KCRT es INFERIDO por remision y ademas 'fuente_unica': true. (3) West Virginia entra con 'confianza': 'verificado' en su entrada, pero esa verificacion respalda el dato original de 37 pies, no el valor activo de 41 pies. Ninguno de los tres altera la composicion numerica del grupo.",
+    "resolucion_coordinador": "No requiere nueva decision del usuario: los tres puntos son consecuencia directa de decisiones ya tomadas y documentadas -- (1) el alcance tandem como configuracion estandar del proyecto ya fue establecido (mismo criterio usado para excluir la variante de eje sencillo en Tennessee, Wyoming y ahora California), (2) la inferencia de Kentucky por remision a 23 CFR 658 fue aprobada explicitamente por el usuario el 2026-09-18, y (3) la reclasificacion de West Virginia a 41 pies KCRT es decision expresa del usuario del 2026-09-18. Quedan como advertencia de lectura para Redaccion, no como arbitraje pendiente.",
+    "nota_fuente_unica": "32 de los 42 miembros tienen 'fuente_unica': true (los 28 del piso federal mas Kentucky, Maryland, Vermont y Wyoming). No se marca el grupo como dependiente de un dato unico porque existe de forma autonoma con sus estados 'verificado' del subgrupo (A): FL, PA, NC, NJ, TN, VA, AL, NH, SC. Un error en cualquiera de los 32 cambiaria la composicion, pero no disolveria ni redefiniria el grupo."
+  },
+  "grupo_43_pies": {
+    "estados": [
+      "New York",
+      "Indiana",
+      "Connecticut",
+      "Minnesota",
+      "Wisconsin"
+    ],
+    "criterio_comun": "Limite de 43 pies entre kingpin y eje/grupo de ejes trasero para semirremolque de mas de 48 pies y hasta 53 pies en combinacion tractocamion-semirremolque, caso general Dry Van/Reefer 53' OTR. Todos son estatutos estatales propios (ninguno es piso federal). Eje de agrupacion principal: valor numerico unicamente. Los cinco son 'confianza': 'verificado'.",
+    "distribucion_por_medida": {
+      "KPRA": [
+        "New York",
+        "Indiana",
+        "Connecticut"
+      ],
+      "KCRT": [
+        "Minnesota",
+        "Wisconsin"
+      ],
+      "N/A": [],
+      "conteo": "KPRA 3 | KCRT 2 | N/A 0"
+    },
+    "excepciones": [
+      "DISTRIBUCION POR TIPO DE MEDIDA: el grupo esta PARTIDO CASI POR LA MITAD: 3 KPRA (New York, Indiana, Connecticut) y 2 KCRT (Minnesota, Wisconsin). Es el unico grupo numerico del dataset con mezcla real de ambas medidas, y la mezcla es material: 43 pies KPRA (al eje mas posterior) es una restriccion MAS ESTRICTA en la practica que 43 pies KCRT (al centro del tandem), porque el centro del tandem esta varios pies por delante del eje mas atrasado. Los cinco estados NO permiten lo mismo pese a compartir la cifra 43.",
+      "Los tres KPRA lo son por texto INEQUIVOCO, no por inferencia: New York, VTL Sec. 385(3)(e), 'the centerline of the rear axle... forty-three feet' (no menciona tandem); Indiana, IC 9-20-13-4, 'the rearmost axle of the semitrailer'; Connecticut, CGS Sec. 14-262(c), 'the center of the rearmost axle with wheels in contact with the road surface'. Ninguno usa formula condicional.",
+      "Los dos KCRT difieren entre si en estructura: Minnesota es KCRT INEQUIVOCO (MN Stat. 169.81 Subd. 2(b), 'the centerline of the rear axle group', sin variante de eje unico); Wisconsin es KCRT CONDICIONAL (Wis. Stat. 348.07(2)(gr)/(gv): 'a point midway between the first and last axles of the tandem axle' para tandem, 'the center of the rearmost axle' para eje sencillo). Wisconsin es el unico estado de 43 pies que seria KPRA si el alcance del proyecto cambiara a eje sencillo.",
+      "New York: red aplicable son las 'qualifying highways' / 'access highways' designadas (incluye tramos de I-95, I-295, I-495 en el area de NYC); exige rear-end protective device de construccion especifica. Fuera de esa red el limite general de longitud de semirremolque baja a 48 pies.",
+      "Indiana: red aplicable es el sistema estatal de autopistas designadas (IC 8-23-4); rige para semirremolques de mas de 48 pies 6 pulgadas. Excepcion de 46 pies para motorsports (fuera de alcance). Fuente primaria via FindLaw (iga.in.gov inaccesible), confirmada por Indiana State Police, que reproduce textualmente 'kingpin and rearmost axle'.",
+      "Connecticut: red aplicable son las rutas US/CT numeradas 1-399, 450, 476, 508, 693 y 695, mas el sistema interestatal y de defensa, mas hasta una milla de acceso. Unico del grupo cuya red se define por numeracion de rutas y no por categoria de autopista.",
+      "Minnesota: unico del grupo cuyo limite aplica statewide, sin restriccion a red designada (MN Stat. Sec. 169.81 Subd. 2(b), confirmado por folleto oficial de MnDOT). Es ademas el caso mas permisivo real del grupo: 43 pies medidos al CENTRO del grupo de ejes y sin restriccion de red.",
+      "Wisconsin: 43 pies en rutas designadas (Wis. Stat. 348.07(2)(gr)/(gv)). Entra con 'verificado' tras la resolucion del usuario (2026-09-18) que descarto la cifra de 41 pies de la tabla federal 23 CFR Appendix B por considerarla historica/'grandfathered' y desactualizada -- mismo criterio ya aplicado a Iowa, reforzado porque esa tabla tambien contradice los datos verificados de California e Indiana. ADVERTENCIA DE LECTURA: si ese arbitraje se revirtiera, Wisconsin migraria a grupo_41_pies (y el grupo de 43 quedaria en 3 KPRA + 1 KCRT); la pertenencia actual descansa en una decision de arbitraje, no en dos fuentes concordantes.",
+      "PATRON ALTERNATIVO DETECTADO Y NO APLICADO: si el eje principal de agrupacion fuera el tipo de medida en vez del valor numerico, este grupo se partiria y New York/Indiana/Connecticut formarian un bloque con Illinois/Maine/California (los KPRA), mientras Minnesota/Wisconsin caerian junto a los 42 estados KCRT. No se hace: el eje numerico es decision cerrada del usuario. Se documenta porque es un agrupamiento alternativo igual de valido en terminos regulatorios."
+    ],
+    "revision_coordinador": false
+  },
+  "grupo_45_6_pies": {
+    "estados": [
+      "Illinois",
+      "Maine"
+    ],
+    "criterio_comun": "Limite de 45 pies 6 pulgadas entre kingpin y eje trasero para semirremolque de mas de 48 pies (hasta 53 pies) en combinacion tractocamion-semirremolque. Es el valor MAS PERMISIVO de los 50 estados. Ambos 'verificado' con segunda fuente.",
+    "distribucion_por_medida": {
+      "KPRA": [
+        "Illinois",
+        "Maine"
+      ],
+      "KCRT": [],
+      "N/A": [],
+      "conteo": "KPRA 2 | KCRT 0 | N/A 0"
+    },
+    "excepciones": [
+      "DISTRIBUCION POR TIPO DE MEDIDA: el grupo figura como 100% KPRA (2 de 2), pero la solidez de esa etiqueta NO es igual en los dos miembros. Maine es KPRA por texto inequivoco: 29-A MRSA Sec. 2390(1)(J)(1), 'the distance from the kingpin to the center of the rearmost axle of the semitrailer'. Illinois es KPRA ASUMIDO POR DEFECTO: 625 ILCS 5/15-107 dice solo 'the center of the rear axle of a semitrailer', sin remision federal, sin seccion de definiciones y sin guia de IDOT que aclare si aplica a eje unico o a grupo tandem; su campo 'medida_confianza' lo declara textualmente 'asumida por defecto (lectura literal), sin remision ni definicion que lo confirme'.",
+      "CONSECUENCIA PRACTICA DE LA DUDA DE ILLINOIS: si Illinois resultara ser KCRT, este grupo dejaria de ser homogeneo en medida y pasaria a 1 KPRA + 1 KCRT. Ademas cambiaria la lectura de fondo: 45'6\" KCRT es mucho mas permisivo que 45'6\" KPRA, por lo que la magnitud real de la ventaja de Illinois sobre el resto del pais depende de esta clasificacion no confirmada.",
+      "Illinois: 45 pies 6 pulgadas en autopistas Clase I y Clase II; el mismo estatuto fija 42 pies 6 pulgadas en carreteras no designadas. Excluye remolques de ganado (fuera de alcance). Texto verificado via Justia y FindLaw por error de certificado SSL en ilga.gov.",
+      "Maine: 45 pies 6 pulgadas para semirremolques de 48-53 pies bajo las disposiciones de longitud extendida (29-A MRSA Sec. 2390(1)(J)(1)). Elevado desde 43 pies por Public Law Chapter 606 (129a Legislatura), confirmado por el Auditor en el texto promulgado.",
+      "Coincidencia de valor y de medida, pero no de estructura normativa: Illinois diferencia explicitamente por clase de carretera (45'6\" vs 42'6\"); Maine fija un valor unico ligado al regimen de longitud extendida. Por el eje numerico esta diferencia no separa el grupo.",
+      "Nota historica: el valor previo de Maine (43 pies, antes de PL Ch. 606) lo habria colocado en grupo_43_pies, donde habria sido el cuarto KPRA de ese grupo. Se usa el valor vigente."
+    ],
+    "revision_coordinador": false,
+    "motivo_revision_coordinador": "DATO NO CONFIRMADO QUE DEFINE LA CARACTERIZACION DEL GRUPO EN EL NIVEL DE MEDIDA. El grupo se describe como '100% KPRA', pero uno de sus dos miembros (Illinois) tiene la medida 'asumida por defecto'. Con solo dos miembros, ese dato asumido determina si el grupo es unanime o mixto. NO reabre el valor numerico de Illinois (45'6\", verificado con doble fuente), solo la clasificacion KPRA/KCRT.",
+    "resolucion_coordinador": "No requiere nueva decision: el usuario ya eligio explicitamente 'asumir KPRA por defecto' para Illinois durante la investigacion de medicion (2026-09-18), ante ausencia total de senal de que fuera condicional. Se mantiene esa decision; queda como advertencia de lectura para Redaccion, no como arbitraje pendiente."
+  },
+  "atipicos": {
+    "estados": [
+      "California"
+    ],
+    "criterio_comun": "Estados cuyo valor numerico no coincide con el de ningun otro de los 50 y que no pueden integrarse a un grupo sin forzar el criterio. Tras los cambios del 2026-09-18 el contenedor queda con UN SOLO miembro: California (40 pies), unico estado del pais en ese valor. Ya no es un contenedor mixto: no hay un segundo caso aislado con el que conviva.",
+    "distribucion_por_medida": {
+      "KPRA": [
+        "California"
+      ],
+      "KCRT": [],
+      "N/A": [],
+      "conteo": "KPRA 1 | KCRT 0 | N/A 0"
+    },
+    "excepciones": [
+      "California -- UNICO ATIPICO DEL DATASET. CVC Sec. 35400(b)(4), 'verificado', segunda fuente Caltrans: 40 pies KPRA para semirremolque con 2 o mas ejes (tandem, caso general del proyecto). Ningun otro de los 50 estados registra el valor 40 pies, ni por texto propio ni por piso federal.",
+      "California -- SIMPLIFICACION DE SU ENTRADA (2026-09-18, decision expresa del usuario): su entrada YA NO tiene dos valores segun configuracion de ejes. La variante de eje sencillo (38 pies KPRA, misma fuente CVC Sec. 35400(b)(4)) fue DESCARTADA y queda documentada en el campo 'variante_eje_sencillo_descartada' de su entrada -- mismo criterio ya aplicado a Tennessee. Consecuencia analitica: California ya NO es atipico por 'complejidad estructural dependiente del numero de ejes'; ahora es un valor fijo simple (40 pies KPRA, caso general). Su atipicidad se reduce a dos motivos limpios: el VALOR (unico en 40) y el TIPO DE MEDIDA (ver siguiente).",
+      "California -- ATIPICO TAMBIEN POR MEDIDA: es el unico KPRA del dataset que mide SIEMPRE al eje mas posterior. El texto de CVC 35400(b)(4) no usa la formula condicional federal ('center of group') ni siquiera para el caso tandem: mide al 'rearmost axle', nunca al centro del grupo. Los demas KPRA del dataset (NY, IN, CT, IL, ME) comparten esa forma de medir, pero todos estan en valores altos (43 y 45'6\"); California combina medida estricta con cifra baja.",
+      "California -- NOTA DE SEVERIDAD PARA REDACCION: 40 pies medidos al eje MAS POSTERIOR es sustancialmente mas restrictivo que 41 pies medidos al CENTRO del tandem. La distancia operativa real entre California y el grupo dominante es mayor que la que sugiere la diferencia de un pie. California es, sin ambiguedad, el estado mas restrictivo de los 50 para un Dry Van/Reefer de 53'.",
+      "SALIDA DE WEST VIRGINIA DE ESTE CONTENEDOR (2026-09-18): West Virginia figuraba aqui por sus 37 pies con medida 'N/A'. Por decision expresa del usuario pasa a 'grupo_41_pies' con 41 pies KCRT. Importante: NO salio porque su dato fuera debil -- el valor de 37 pies estaba bien confirmado (WV Code Sec. 17C-17-4 mas segunda fuente WV DOT) -- sino porque medía un concepto distinto (espaciamiento eje trasero del tractor - eje delantero del semirremolque) y el usuario decidio clasificarlo en el caso general del proyecto. Su dato original queda preservado en 'dato_original_no_clasificable' dentro de su entrada.",
+      "Ningun estado fue forzado a un grupo para que 'cerrara mejor'. California permanece sin agrupar porque no existe ningun otro estado con su valor; los dos movimientos recientes (Wyoming, West Virginia) hacia grupo_41_pies derivan de cambios de dato/clasificacion en el archivo de origen, no de un ajuste del Analista para reducir el numero de atipicos."
+    ],
+    "revision_coordinador": false,
+    "nota_dependencia": "La soledad de California depende de DOS decisiones ya arbitradas, no de datos pendientes. (1) Si se revirtiera el descarte del valor 40'/38' de Wyoming, Wyoming volveria a 40 pies y se reconstituiria un grupo 'California + Wyoming': California dejaria de ser atipico y el contenedor pasaria a ser un grupo con criterio propio. (2) Si se revirtiera la reclasificacion de West Virginia, este volveria a 'atipicos' con 37 pies y medida 'N/A', y California dejaria de ser el unico miembro (aunque seguiria siendo unico en su valor). Se documenta sin marcar para revision porque ambas decisiones son expresas del usuario (2026-09-18). El caso (1) es el unico punto de todo el agrupamiento donde una reversion alteraria la EXISTENCIA de un grupo y no solo su composicion."
+  },
+  "_meta": {
+    "fecha_analisis": "2026-09-18",
+    "estados_en_alcance": 50,
+    "criterio_de_alcance": "confianza 'verificado' (18) MAS confianza 'alta' con 'fuente_unica': true (32). Cobertura completa de los 50 estados; ninguno excluido.",
+    "eje_de_agrupacion": "DOS NIVELES. (1) PRINCIPAL: valor numerico del limite KPRA/KCRT unicamente; la condicion de aplicacion (statewide vs. National Network vs. Interstate/rutas designadas) no se usa como criterio de separacion ni de union, por decision del usuario. (2) SECUNDARIO: dentro de cada grupo numerico se documenta en 'distribucion_por_medida' y en 'excepciones' la reparticion por tipo de medida (KPRA / KCRT / N/A). El nivel secundario es DESCRIPTIVO: no subdivide ni reordena los grupos, solo caracteriza su composicion interna.",
+    "definiciones_de_medida": "KPRA = Kingpin to Rearmost Axle, mide del kingpin al eje individual mas posterior. KCRT = Kingpin to Center of Rear Tandem, mide del kingpin al centro del tandem/grupo de ejes traseros. N/A = la regulacion no mide kingpin-a-eje trasero; tras la reclasificacion de West Virginia (2026-09-18) NINGUN estado del dataset activo queda en N/A. Para un mismo semirremolque, un limite KCRT es materialmente mas permisivo que el mismo numero expresado en KPRA.",
+    "distribucion_numerica": "41 pies: 42 estados | 43 pies: 5 estados | 45 pies 6 pulgadas: 2 estados | atipicos: 1 estado (California, 40'). Total 50.",
+    "distribucion_por_medida_global": "KCRT: 44 estados (los 42 del grupo de 41 pies, mas Minnesota y Wisconsin del grupo de 43). KPRA: 6 estados (New York, Indiana, Connecticut del grupo de 43; Illinois y Maine del grupo de 45'6\"; California en atipicos). N/A: 0 estados. Total 50.",
+    "lectura_cruzada_valor_x_medida": "41' KCRT: 42 estados | 43' KPRA: 3 (NY, IN, CT) | 43' KCRT: 2 (MN, WI) | 45'6\" KPRA: 2 (IL, ME) | 40' KPRA: 1 (CA). Observacion: la medida KPRA se concentra en los valores ALTOS (43 y 45'6\") y en el unico valor bajo (California 40'), mientras KCRT domina el valor central de 41. Esto es coherente: un estado que mide al eje mas posterior necesita una cifra mayor para permitir la misma configuracion fisica, salvo California, que combina medida estricta con cifra baja y por eso es el caso mas restrictivo real del pais.",
+    "composicion_por_calidad_de_dato": "verificado (18): California, Florida, Illinois, Pennsylvania, North Carolina, New York, Indiana, New Jersey, Tennessee, Virginia, Alabama, Connecticut, Maine, Minnesota, New Hampshire, South Carolina, West Virginia, Wisconsin. alta + fuente_unica investigados individualmente (4): Kentucky, Maryland, Vermont, Wyoming. alta + fuente_unica por aplicacion uniforme del piso federal (28): Texas, Ohio, Georgia, Michigan, Missouri, Alaska, Arizona, Arkansas, Colorado, Delaware, Hawaii, Idaho, Iowa, Kansas, Louisiana, Massachusetts, Mississippi, Montana, Nebraska, Nevada, New Mexico, North Dakota, Oklahoma, Oregon, Rhode Island, South Dakota, Utah, Washington. SALVEDAD: la etiqueta 'verificado' de West Virginia respalda su dato original de 37 pies, no el valor activo de 41 pies asignado por decision del usuario.",
+    "calidad_de_la_determinacion_de_medida": "Textual inequivoca o condicional con texto explicito de ambas ramas (19): New York, Indiana, Connecticut, Maine, Minnesota, Maryland, Vermont, California, Florida, Pennsylvania, North Carolina, New Jersey, Tennessee, Virginia, Alabama, New Hampshire, South Carolina, Wisconsin. Derivada de la regla condicional federal aplicada al alcance tandem del proyecto (29): los 28 del piso federal mas Wyoming. Asignada por decision de clasificacion del usuario, sobre un texto estatal que mide otro concepto (1): West Virginia. Inferida por remision normativa, no textual (1): Kentucky. Asumida por defecto sin confirmacion (1): Illinois. Los tres ultimos casos son los unicos con debilidad propia en la clasificacion de medida y estan marcados en sus grupos.",
+    "cambio_respecto_version_anterior": "(1) CALIFORNIA SIMPLIFICADA: su entrada pasa de dos valores dependientes de ejes (40' tandem / 38' eje sencillo) a un valor fijo simple de 40 pies KPRA; la variante de 38' queda descartada y documentada en 'variante_eje_sencillo_descartada'. Sigue siendo el UNICO estado en 40 pies, pero ya no es atipico por complejidad estructural, solo por valor y por tipo de medida. (2) WEST VIRGINIA SALE DE 'atipicos' Y ENTRA A 'grupo_41_pies' (41 pies KCRT) por decision expresa del usuario, reemplazando su valor original de 37 pies (que medía espaciamiento tractor-semirremolque, concepto distinto). (3) grupo_41_pies pasa de 41 a 42 estados. (4) 'atipicos' pasa de 2 a 1 miembro: queda SOLO California. (5) Desaparece la medida 'N/A' del dataset activo (era exclusiva de West Virginia): los 50 estados quedan expresados en la misma magnitud. (6) grupo_43_pies y grupo_45_6_pies sin cambios de composicion ni de caracterizacion. (7) Ningun estado cambio de grupo por criterio del Analista: los movimientos derivan de cambios de dato/clasificacion en el archivo de origen.",
+    "contradicciones_detectadas": "Ninguna pendiente entre entradas del alcance. Las contradicciones historicas (Iowa: 40 pies derogados vs. texto vigente sin medida kingpin; Wisconsin: 43 pies estatutarios vs. 41 pies de la tabla federal 23 CFR Appendix B; Wyoming: 40'/38' de agregadores vs. ausencia en el texto estatal; West Virginia: 37 pies confirmados pero de concepto no comparable) fueron cerradas por decision del usuario y no se reabren. Se deja constancia de que la tabla federal 23 CFR Appendix B contradice ademas los datos verificados de California e Indiana; el usuario ya la califico como historica/desactualizada, por lo que no genera conflicto activo.",
+    "precondicion_verificada": "Revisadas las 50 entradas del archivo de origen: todas cumplen 'verificado' o ('alta' + 'fuente_unica': true). Ninguna tiene 'confianza': 'conflicto' abierto y ninguna tiene 'requiere_revision': true. Los 50 estados tienen el campo 'medida' poblado y el campo 'medida_investigacion' con el fundamento de la determinacion. Se confirma ademas que California registra ahora 'limite_especifico': '40 pies (semirremolque con 2 o mas ejes, caso general)' con 'medida': 'KPRA', y West Virginia 'limite_especifico': '41 pies (caso general)' con 'medida': 'KCRT'.",
+    "puntos_reportados_al_coordinador": "(1) WEST VIRGINIA -- DISTINCION DE CALIDAD DE DATO FRENTE A WYOMING (documentada por indicacion expresa del usuario): ambos llegan a 41 pies por asignacion, pero Wyoming por AUSENCIA de fuente confirmable y West Virginia por DECISION DE CLASIFICACION sobre un dato que SI estaba bien confirmado (texto estatal legible mas segunda fuente WV DOT). No deben presentarse como el mismo tipo de caso. (2) WEST VIRGINIA -- su entrada conserva 'confianza': 'verificado', pero esa verificacion cubre el dato original de 37 pies, no el valor activo de 41 pies; Redaccion no debe presentarlo como '41 pies verificados con doble fuente'. (3) grupo_41_pies -- la unanimidad KCRT depende en 29 de 42 casos del alcance tandem del proyecto (no de texto estatal), y Kentucky aporta el unico KCRT inferido por remision. (4) grupo_45_6_pies -- la medida KPRA de Illinois es 'asumida por defecto' y, con solo dos miembros, determina si el grupo es unanime o mixto. (5) Patron alternativo documentado y no aplicado: agrupar por tipo de medida en vez de por valor partiria el grupo de 43 pies y uniria NY/IN/CT con IL/ME/CA; no se ejecuta porque el eje numerico es decision cerrada del usuario. (6) Dependencia documentada en 'atipicos': si se revirtiera el descarte del dato de Wyoming, se reconstituiria un grupo de 40 pies y California dejaria de ser atipico.",
+    "advertencia_de_lectura_para_redaccion": "Cuatro advertencias. (A) El grupo de 41 pies concentra 42 de 50 estados, pero 28 de ellos NO tienen medida propia a nivel estatal (piso federal aplicado uniformemente) y otros 2 (Wyoming, West Virginia) entraron por asignacion tras descartar su dato original: presentar '42 de 50 estados permiten 41 pies' sin ese matiz sobrerrepresenta la homogeneidad regulatoria real. Los estados con regla kingpin-a-eje propia y explicitamente medida en 41 pies son 12; con regla propia en cualquier valor, 22 de 50. (B) Comparar cifras entre estados de distinta medida es enganoso: 43 pies KPRA (NY, IN, CT) es mas estricto que 43 pies KCRT (MN, WI), y 40 pies KPRA (California) es mucho mas estricto que 41 pies KCRT. (C) La tabla comparativa de los 50 estados ya es homogenea en magnitud (no quedan medidas 'N/A'), pero esa homogeneidad se logro reclasificando West Virginia por decision del usuario, no por nueva evidencia: la regulacion realmente vigente alli se expresa como espaciamiento tractor-semirremolque de 37 pies. (D) California es el unico atipico y el caso mas restrictivo del pais; su entrada ya no depende del numero de ejes (la variante de 38 pies fue descartada), por lo que debe presentarse como un valor fijo simple de 40 pies KPRA y no como una regla condicional."
+  }
+}

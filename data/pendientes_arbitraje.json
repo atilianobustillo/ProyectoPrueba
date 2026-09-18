@@ -1,0 +1,102 @@
+{
+  "politica_resolucion_automatica": {
+    "descripcion": "Reglas que el Coordinador aplica automaticamente sin detener el bucle Investigador->Auditor->Analista, porque ya fueron validadas repetidamente por el usuario en este proyecto.",
+    "reglas": [
+      "Si un estado tiene un limite KPRA/KCRT distinto segun tipo de carga (motorsports, car haulers, ganado/livestock, vehiculos motorizados, etc.), se conserva el limite del caso general y se documenta la exclusion en 'resolucion_coordinador'. No se detiene el bucle.",
+      "Si un estado tiene un limite KPRA/KCRT que solo aplica en una red de autopistas designadas/calificadas (qualifying/access highways, sistema estatal de autopistas), se conserva ese limite como dato del estado, ya que el alcance del proyecto es carga OTR en rutas primarias. No se detiene el bucle.",
+      "Si el Investigador marca 'confianza: no encontrado' porque el estado no usa medida KPRA/KCRT (regula solo por longitud total), el estado queda excluido del pipeline sin pasar a Auditor/Analista. No se detiene el bucle.",
+      "Si el Auditor no encuentra segunda fuente oficial accesible, el dato queda como 'alta' + 'fuente_unica': true y avanza igual al Analista. No se detiene el bucle (a menos que el Analista determine que ese dato fuente-unica cambia un agrupamiento de forma relevante, ver abajo).",
+      "Diferencias de terminologia (KPRA vs KCRT) tal como las registra el Investigador se aceptan sin reinvestigar, salvo que el propio Investigador reporte incertidumbre explicita sobre cual termino aplica."
+    ]
+  },
+  "pendientes": [
+    {
+      "estado": "Alabama",
+      "tipo": "ambiguedad_no_resuelta",
+      "fecha_registro": "2026-09-17",
+      "detalle": "Code of Alabama Sec. 32-9-20 contiene una excepcion separada para combinaciones truck tractor-semitrailer usadas exclusivamente para transportar vehiculos automotores (auto transporters/stinger-steered), con longitud total de combinacion de hasta 65/80 pies. No quedo claro si esta excepcion tambien modifica la medida KPRA de 41 pies registrada, o si solo afecta la longitud total de la combinacion (serian dos cosas distintas). No encaja en el patron ya resuelto de 'excepcion por tipo de carga descartada por estar fuera de alcance', porque aqui la duda es si el propio dato KPRA de 41' es correcto o incompleto para el caso general, no si una excepcion alternativa aplica.",
+      "estado_dato_actual": "Se dejo el dato de 41 pies KPRA sin modificar y avanzo a Auditor con requiere_revision: false para no bloquear el bucle; la duda queda documentada aqui, no en el dato.",
+      "accion_sugerida": "Revisar el texto completo de Sec. 32-9-20 (idealmente el PDF oficial de ALDOT que no pudo leerse) para confirmar si el auto-transporter exception redefine el KPRA o solo la longitud total.",
+      "resuelto": true,
+      "resolucion": "Usuario confirmo el dato de 41 pies (2026-09-18). No se investiga mas la duda del auto-transporter exception; el dato se mantiene tal cual."
+    },
+    {
+      "estado": "Iowa",
+      "tipo": "conflicto_confirmado_por_auditor",
+      "fecha_registro": "2026-09-17",
+      "detalle": "CONFIRMADO por el Auditor (no solo sospecha del Investigador): el Auditor leyo directamente el PDF oficial de Iowa Code Sec. 321.457 en dos ediciones (2026 y 2009+Supplement/2018) y NINGUNA contiene medida KPRA — Iowa regula solo por longitud total. La cifra de 40 pies que cito el Investigador SI existio historicamente (creada por Iowa House File 747, promulgada 21-marzo-1980, texto verificado por el Auditor) pero fue derogada/removida del texto vigente en fecha no determinada entre 1980 y 2009. Es decir: el dato del Investigador es correcto para una version historica del estatuto, pero no para el texto vigente.",
+      "conflicto_detalle_en_dataset": "El detalle completo (cita del texto de 1980 vs. cita del texto vigente 2026/2009) esta guardado en el campo 'conflicto_detalle' de la entrada Iowa en regulaciones_estados.json.",
+      "estado_dato_actual": "confianza: 'conflicto'. La entrada NO se considera 'verificada' y por tanto el Analista la excluye de los agrupamientos hasta que se arbitre.",
+      "decision_pendiente": "El Coordinador/usuario debe decidir: (a) tratar Iowa como 'no encontrado' (usar el texto vigente, sin medida KPRA aplicable, igual que Ohio/Missouri/etc.), o (b) mantener el dato historico de 40 pies con una nota aclaratoria de que proviene de una version derogada (no recomendado para un proyecto operativo/OTR actual), o (c) alguna otra resolucion. Mientras no se decida, Iowa queda fuera de los grupos regulatorios.",
+      "resuelto": true,
+      "resolucion": "Usuario eligio opcion (a) (2026-09-18): Iowa pasa a confianza 'no encontrado', excluido del pipeline igual que Ohio/Missouri/Kansas/Louisiana. El dato historico de 1980 queda solo como referencia en conflicto_detalle."
+    },
+    {
+      "estado": "grupo_41_general (metodologia de agrupacion)",
+      "tipo": "revision_coordinador_del_analista",
+      "fecha_registro": "2026-09-18",
+      "detalle": "El Analista marco 'revision_coordinador: true' en el grupo de 41 pies (data/grupos_regulatorios.json). Pregunta de fondo: el eje de agrupacion deberia ser el VALOR NUMERICO del limite KPRA, o la CONDICION DE APLICACION (si el limite rige en todo el estado o solo dentro de una red de autopistas/rutas designadas)? Con el eje actual (valor numerico), Alabama (41', pero solo en red designada 'National Network') queda en el grupo de 41' junto a Virginia (41', sin condicion de red, el unico 'puro'), en vez de agruparse con NY/IN/CT (43', tambien con condicion de red). Ademas, si una fuente secundaria no confirmada sobre New Jersey resultara cierta (limite tambien restringido a Interestatales/autopistas designadas), NJ tendria el mismo problema que Alabama, y el grupo de 41' 'sin condicion de red' quedaria acreditado solo para Virginia.",
+      "estado_dato_actual": "El Analista dejo la agrupacion actual (Alabama en grupo_41_general) sin cambiarla, solo marco la duda. No se ha aplicado ninguna regla nueva de auto-resolucion para esto porque es una decision de metodologia de analisis, no de dato individual.",
+      "accion_sugerida": "Cuando se revise este pendiente: decidir si conviene una re-clasificacion en dos ejes (valor numerico Y condicion de aplicacion, por ejemplo como sub-grupos dentro de cada valor), o si el eje numerico actual es suficiente para el proposito del proyecto. Idealmente resolver antes de que Redaccion genere el informe final, para que el informe no herede una ambiguedad metodologica sin explicar.",
+      "resuelto": true,
+      "resolucion": "Usuario decidio (2026-09-18): el limite se trata como aplicable a todo el estado. Se mantiene el eje de agrupacion actual (valor numerico unicamente); la condicion de red de autopistas designadas no se usa como criterio de separacion. Aplicado en data/grupos_regulatorios.json."
+    },
+    {
+      "estado": "Washington (pregunta metodologica mas amplia)",
+      "tipo": "pregunta_metodologica_no_resuelta",
+      "fecha_registro": "2026-09-18",
+      "detalle": "El Investigador senalo para Washington que el codigo estatal (RCW 46.44) no codifica un limite KPRA propio, pero que existe un piso federal de 41 pies (23 CFR 658.19) aplicable en la National Network que Washington podria seguir de facto sin repetirlo en su propio codigo. Esto plantea una pregunta metodologica que podria afectar a TODOS los estados marcados 'no encontrado' en el proyecto (Texas, Ohio, Georgia, Michigan, Missouri, Alaska, Arizona, Arkansas, Colorado, Delaware, Hawaii, Idaho, Kansas, Louisiana, Massachusetts, Mississippi, Montana, Nebraska, Nevada, New Mexico, North Dakota, Oklahoma, Oregon, Rhode Island, South Dakota, Utah, Washington): ¿alguno de estos estados, al no tener regulacion KPRA propia, deberia registrarse con el piso federal de 41 pies (23 CFR 658.19) en vez de 'no encontrado' / sin dato?",
+      "estado_dato_actual": "Washington (y todos los demas 'no encontrado') quedan como estan: sin medida KPRA registrada, excluidos del pipeline. No se aplico el piso federal a ninguno por ser una decision metodologica de alcance amplio, no un dato individual.",
+      "accion_sugerida": "Decidir si el proyecto debe distinguir entre 'el estado no tiene medida KPRA propia' (dato actual) y 'el estado no tiene medida KPRA propia pero aplicaria el piso federal de 41 pies en la National Network' (interpretacion alternativa). Si se decide aplicar el piso federal, habria que revisar los ~25 estados 'no encontrado' bajo ese criterio, lo cual es un cambio de alcance significativo.",
+      "resuelto": true,
+      "resolucion": "Usuario decidio (2026-09-18) aplicar el piso federal de 41 pies (23 CFR 658.19) a los 28 estados que estaban 'no encontrado' (incluye Iowa, que habia quedado excluido por su propio arbitraje anterior -- la nueva decision general lo abarca tambien). Aplicado via script a regulaciones_estados.json: los 28 pasan de 'no encontrado' a 'alta' + 'fuente_unica': true, con limite_especifico '41 pies (piso federal minimo, National Network)'. Documentado en cada entrada con 'nota_investigacion_estatal_original' (preserva la busqueda estatal original) y 'resolucion_coordinador_final'. Estos 28 estados no pasaron por auditoria individual de segunda fuente (la fuente federal 23 CFR 658.19 es uniforme para todos); quedan calificados para el Analista por la regla de 'alta'+fuente_unica."
+    },
+    {
+      "estado": "grupo_40_pies_dependiente_de_ejes (California + Wyoming)",
+      "tipo": "revision_coordinador_del_analista",
+      "fecha_registro": "2026-09-18",
+      "detalle": "El Analista marco 'revision_coordinador: true' porque este grupo existe UNICAMENTE por la coincidencia entre California ('verificado') y Wyoming ('alta' + 'fuente_unica': true, sin segunda fuente). Si el dato de Wyoming fuera incorrecto, el grupo se disuelve y California vuelve a 'atipicos' en solitario. Es el unico grupo del dataset completo cuya EXISTENCIA (no solo composicion) depende de un dato fuente_unica.",
+      "estado_dato_actual": "Grupo mantenido, revision_coordinador puesto en false en grupos_regulatorios.json.",
+      "resuelto": true,
+      "resolucion": "Usuario decidio (2026-09-18) mantener el grupo, aceptando el dato fuente_unica de Wyoming, mismo criterio ya aplicado a Kentucky/Maryland/Vermont en grupo_41_pies."
+    },
+    {
+      "estado": "Wisconsin",
+      "tipo": "conflicto_confirmado_por_auditor",
+      "fecha_registro": "2026-09-18",
+      "detalle": "El Investigador registro 43 pies KPRA (Wis. Stat. 348.07(2)(gr)/(gv), texto vigente verificado directamente en docs.legis.wisconsin.gov). El Auditor, al no poder acceder a fuentes estatales adicionales (WisDOT PDF y codigo administrativo Trans 276 ilegibles, FindLaw/Onecle con error 404), uso como segunda fuente 23 CFR Appendix B to Part 658 ('Grandfathered Semitrailer Lengths', tabla federal), cuya nota para Wisconsin indica 41 pies -- una CONTRADICCION directa con el dato del Investigador.",
+      "senal_de_alerta_del_propio_auditor": "El Auditor senalo que esa misma tabla federal tambien da cifras distintas a las ya verificadas para California (38' vs. verificado 40'/38') e Indiana (40'6\" vs. verificado 43'), lo que sugiere que es una tabla HISTORICA 'grandfathered' (pre-ISTEA 1991) que no refleja enmiendas estatales posteriores -- patron similar a Iowa, donde una cifra historica/derogada diferia del texto vigente.",
+      "estado_dato_actual": "confianza: 'conflicto'. Wisconsin queda excluido de los grupos regulatorios hasta que se arbitre (mismo tratamiento que tuvo Iowa).",
+      "decision_pendiente": "El Coordinador/usuario debe decidir: (a) confiar en el estatuto estatal vigente (43 pies, Wis. Stat. 348.07) por ser la fuente mas directa y confirmada contra texto oficial, tratando la tabla federal como historica/desactualizada (razonamiento ya usado en Iowa); (b) confiar en la tabla federal (41 pies) por ser una fuente federal oficial; o (c) intentar una tercera fuente (idealmente WisDOT actual) antes de decidir. El Auditor mismo sugiere que la tabla federal podria estar desactualizada, pero no lo resuelve por no ser su rol.",
+      "accion_sugerida": "Si se quiere resolver rapido: aplicar el mismo criterio usado en Iowa (preferir el texto estatal vigente sobre una fuente federal historica/grandfathered cuando hay evidencia de que la tabla federal esta desactualizada, como aqui con los mismatches en CA/IN).",
+      "resuelto": true,
+      "resolucion": "Usuario eligio (2026-09-18) confiar en el estatuto estatal vigente: 43 pies. Confianza actualizada a 'verificado' en regulaciones_estados.json."
+    },
+    {
+      "estado": "Wyoming",
+      "tipo": "dato_original_sin_respaldo_textual",
+      "fecha_registro": "2026-09-18",
+      "detalle": "Durante la investigacion de medicion KPRA/KCRT, se intento confirmar el punto de medicion exacto del valor original de Wyoming (40 pies tandem / 38 pies eje sencillo, citando Wyoming Statute 31-18-802 via Justia). Dos rondas de investigacion adicional (una del Auditor original, otra especifica de esta sub-tarea) NO pudieron confirmar que 31-18-802 contenga esos valores en absoluto -- el texto legible de esa seccion solo regula longitud total. Los valores 40'/38' solo aparecen en fuentes secundarias no oficiales (agregadores de la industria, sin citar seccion exacta), y dos PDFs oficiales de WYDOT/WyoLeg que podrian contenerlos no se pudieron decodificar pese a multiples estrategias (cache de Google, Wayback Machine, busqueda de fragmentos indexados, Wyoming Administrative Rules Search, Cornell Law).",
+      "estado_dato_actual": "SUPERADO. El valor original (40'/38') fue descartado y reemplazado.",
+      "resuelto": true,
+      "resolucion": "Usuario decidio (2026-09-18) descartar el valor 40'/38' no confirmado y dejar Wyoming en 41 pies KCRT (caso general del proyecto, mismo tratamiento que los estados sin medida propia confirmada / piso federal). El dato original queda preservado como referencia en el campo 'dato_original_no_confirmado' de la entrada Wyoming en regulaciones_estados.json, pero YA NO es el dato activo del proyecto. CONSECUENCIA EN AGRUPACION: el grupo 'grupo_40_pies_dependiente_de_ejes' (California + Wyoming) pierde a Wyoming y se disuelve; California vuelve a 'atipicos' en solitario. Esto SUPERA la resolucion anterior de este mismo pendiente (la de 'mantener el grupo', registrada arriba bajo 'grupo_40_pies_dependiente_de_ejes'), que quedaba condicionada a que el dato de Wyoming fuera correcto -- ya no lo es."
+    },
+    {
+      "estado": "California",
+      "tipo": "ajuste_de_alcance_por_indicacion_usuario",
+      "fecha_registro": "2026-09-18",
+      "detalle": "El usuario indico explicitamente que el analisis debe basarse en eje doble/tandem, descartando la variante de eje sencillo.",
+      "resuelto": true,
+      "resolucion": "Usuario decidio (2026-09-18) conservar solo el caso tandem/2+ ejes (40 pies KPRA) en la entrada de California, descartando la variante de eje sencillo (38 pies), mismo criterio ya aplicado a Tennessee. El dato de 38 pies queda preservado como referencia en 'variante_eje_sencillo_descartada'. No cambia el grupo (California sigue siendo el unico estado en 40 pies), pero simplifica su caracterizacion: ya no es atipico por estructura dependiente de ejes, solo por valor unico y por medir siempre al eje mas posterior (KPRA puro)."
+    },
+    {
+      "estado": "West Virginia",
+      "tipo": "reclasificacion_por_indicacion_usuario",
+      "fecha_registro": "2026-09-18",
+      "detalle": "El dato original de West Virginia (37 pies, WV Code Sec. 17C-17-4, 'verificado' con segunda fuente WV DOT) mide un concepto DISTINTO a KPRA/KCRT: espaciamiento entre el eje trasero del tractor y el eje delantero del semirremolque, no distancia kingpin-a-eje-trasero. A diferencia de Wyoming, este dato SI esta bien confirmado contra fuente oficial -- el descarte no es por falta de respaldo, sino porque el usuario decidio que, para efectos de clasificacion/agrupacion del proyecto, West Virginia debe entrar en la categoria 41 pies KCRT (el caso general) en lugar de quedar aislado en 'atipicos' con una medida no comparable.",
+      "estado_dato_actual": "SUPERADO. El valor original (37 pies, espaciamiento tractor-remolque) fue descartado para clasificacion y reemplazado por 41 pies KCRT.",
+      "resuelto": true,
+      "resolucion": "Usuario decidio (2026-09-18) que West Virginia entra en la categoria 41 pies KCRT (mismo tratamiento aplicado a Wyoming, aunque en este caso el dato original si estaba confirmado -- se prioriza la instruccion expresa del usuario sobre el dato verificado). El valor de 37 pies queda preservado como referencia en 'dato_original_no_clasificable' en la entrada de West Virginia. CONSECUENCIA EN AGRUPACION: West Virginia sale de 'atipicos' y se une a 'grupo_41_pies'; 'atipicos' queda con California como unico miembro."
+    }
+  ]
+}

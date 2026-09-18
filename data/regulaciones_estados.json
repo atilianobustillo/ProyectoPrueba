@@ -1,0 +1,914 @@
+[
+  {
+    "estado": "Texas",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Texas Transportation Code Sec. 621.204 (https://texas.public.law/statutes/tex._transp._code_section_621.204); TxDMV Texas Size/Weight Limits (https://www.txdmv.gov/motor-carriers/oversize-overweight-permits/texas-size-weight-limits); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "resolucion_coordinador": "Se registra como estado sin regulacion KPRA/KCRT aplicable. Texas queda excluido del analisis comparativo por esta medida; no requiere mas investigacion ni pasa a Auditor/Analista.",
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA/KCRT especifica en el Texas Transportation Code ni en la documentacion de TxDMV consultada. Texas regula la longitud mediante longitud total de la combinacion tractocamion-semirremolque (59 pies, Sec. 621.204), no mediante distancia kingpin-eje trasero. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "California",
+    "medida": "KPRA",
+    "configuraciones_permitidas": [
+      "Semirremolque con 2 o mas ejes (tandem, caso general del proyecto): hasta 40 pies KPRA"
+    ],
+    "limite_especifico": "40 pies (semirremolque con 2 o mas ejes, caso general)",
+    "fuente": "California Vehicle Code Sec. 35400(b)(4) (https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=35400)",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "verificado",
+    "segunda_fuente_auditor": "Caltrans (California Department of Transportation), Vehicle Lengths (https://dot.ca.gov/programs/traffic-operations/legal-truck-access/vehicle-lengths)",
+    "fecha_auditoria": "2026-09-17",
+    "resultado_auditoria": "La segunda fuente (Caltrans) coincide con el dato del Investigador: KPRA de hasta 40 pies para semirremolques con 2 o mas ejes y hasta 38 pies para semirremolques con 1 eje, citando CVC Sec. 35400(b)(4).",
+    "medida_investigacion": "California Vehicle Code Sec. 35400(b)(4): \"the distance from the kingpin to the rearmost axle of the semitrailer does not exceed 40 feet for semitrailers having two or more axles, or 38 feet for semitrailers having one axle.\" A diferencia de la federal y Alabama, California mide SIEMPRE al eje mas posterior (KPRA), independientemente del numero de ejes traseros -- no usa \"center of group\" para configuraciones de 2+ ejes.",
+    "resolucion_coordinador": "Por decision del usuario (2026-09-18), el analisis se basa en eje doble/tandem (configuracion estandar del proyecto Dry Van/Reefer 53'); se descarta la variante de eje sencillo (38 pies), mismo criterio ya aplicado a Tennessee y a la version anterior de Wyoming.",
+    "variante_eje_sencillo_descartada": "38 pies KPRA para semirremolque con 1 eje (misma fuente, CVC Sec. 35400(b)(4)); descartada por no ser la configuracion estandar del proyecto."
+  },
+  {
+    "estado": "Florida",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies y hasta 57 pies: hasta 41 pies KPRA (caso general)"
+    ],
+    "limite_especifico": "41 pies (caso general)",
+    "fuente": "Florida Statutes Sec. 316.515(3)(b) (https://www.flsenate.gov/Laws/Statutes/2025/316.515)",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "verificado",
+    "segunda_fuente_auditor": "Florida Department of Transportation (FDOT), Motor Carrier Size and Weight (MCSAW) Questions and Answers (https://www.fdot.gov/mcsaw/motorcarrierqa.shtm)",
+    "fecha_auditoria": "2026-09-17",
+    "resultado_auditoria": "La segunda fuente (FDOT MCSAW) coincide con el dato del Investigador: distancia kingpin-eje trasero de hasta 41 pies, citando Fla. Stat. Sec. 316.515(3)(b)2a. (Caso general, sin considerar excepcion de motorsports).",
+    "requiere_revision": false,
+    "motivo_revision": "El limite KPRA de Florida difiere segun el tipo de carga dentro del mismo estado: 41 pies para el caso general, pero 46 pies para semirremolques usados exclusiva o principalmente para transportar vehiculos en eventos de motorsports. No es claro cual valor corresponde registrar como limite unico del estado.",
+    "resolucion_coordinador": "Se conserva unicamente el limite general (41 pies). La excepcion de 46 pies para motorsports queda fuera del alcance del proyecto (alcance de carga: Dry Van / Reefer 53').",
+    "medida_investigacion": "Florida Statutes Sec. 316.515(3)(b)2.a: \"the center of the rear axle or rear group of axles.\" Definicion condicional (eje unico -> KPRA; grupo/tandem -> KCRT), misma estructura que la federal/Alabama. El alcance del proyecto (eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Illinois",
+    "medida": "KPRA",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies en combinacion con tractocamion: hasta 45 pies 6 pulgadas KPRA"
+    ],
+    "limite_especifico": "45 pies 6 pulgadas (semirremolques de mas de 48 pies)",
+    "fuente": "625 ILCS 5/15-107, Illinois Vehicle Code (texto oficial en https://www.ilga.gov/documents/legislation/ilcs/documents/062500050K15-107.htm no se pudo verificar por error de certificado del sitio; se uso reproduccion del texto estatutario en Justia: https://law.justia.com/codes/illinois/chapter-625/act-625-ilcs-5/chapter-15/)",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "verificado",
+    "fuente_unica": false,
+    "nota": "fuente ambigua: no se pudo acceder directamente al sitio oficial ilga.gov (error de certificado SSL), se verifico el texto via reproduccion de Justia Law",
+    "segunda_fuente_auditor": "FindLaw, Illinois Statutes Chapter 625. Vehicles Sec. 5/15-107 (https://codes.findlaw.com/il/chapter-625-vehicles/il-st-sect-625-5-15-107.html)",
+    "fecha_auditoria": "2026-09-17",
+    "resultado_auditoria": "Reintento adicional de segunda fuente independiente: se probaron Cornell LII (law.cornell.edu, sin reproduccion directa del texto de 625 ILCS 5/15-107 en los resultados), Casetext (sin resultados relevantes) y FindLaw (codes.findlaw.com), que si cargo y permitio leer el texto completo. FindLaw reproduce el mismo estatuto 625 ILCS 5/15-107 y coincide con el dato del Investigador: distancia kingpin-eje trasero (KPRA) de hasta 45 pies 6 pulgadas para semirremolques de mas de 48 pies en combinacion con tractocamion, en autopistas Clase I y Clase II, con la misma excepcion para remolques de transporte de ganado (Sec. 18b-101). (Nota adicional: FindLaw tambien reproduce un limite mas estricto de 42 pies 6 pulgadas para carreteras no designadas (non-designated highways), consistente con el mismo estatuto; no contradice el dato registrado ya que el proyecto usa el limite de autopistas designadas Clase I/II). No se pudo acceder de forma directa a ilga.gov (persiste error de certificado SSL) ni se encontro reproduccion accesible en Cornell LII o Casetext, pero FindLaw sirve como segunda fuente independiente valida (base de datos legal distinta de Justia) que confirma el dato sin contradiccion.",
+    "requiere_revision": false,
+    "motivo_revision": "El limite KPRA de 45 pies 6 pulgadas no aplica a remolques o semirremolques usados para el transporte de ganado (livestock), segun excepcion en el mismo estatuto. Regulacion distinta segun tipo de carga dentro del mismo estado; no es claro cual valor corresponde registrar como limite unico.",
+    "resolucion_coordinador": "El alcance del proyecto es carga tipo Dry Van / Reefer en semirremolque de 53', no transporte de ganado. La excepcion de livestock no aplica; se conserva el limite general de 45 pies 6 pulgadas sin modificacion. La nota de fuente ambigua queda pendiente de confirmacion normal por el Auditor (segunda fuente), no bloquea el avance.",
+    "medida_investigacion": "625 ILCS 5/15-107: \"the center of the rear axle of a semitrailer\". No hay remision a normativa federal, ni seccion de definiciones, ni guia administrativa de IDOT que aclare si aplica a eje unico o grupo tandem. Por decision del usuario (2026-09-18), se asume KPRA por defecto (lectura literal: eje singular), ante ausencia total de senal de que sea una medida condicional.",
+    "medida_confianza": "asumida por defecto (lectura literal), sin remision ni definicion que lo confirme"
+  },
+  {
+    "estado": "Pennsylvania",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Remolque simple en combinacion con tractor (hasta 53 pies de longitud total): hasta 41 pies KPRA (caso general)"
+    ],
+    "limite_especifico": "41 pies (caso general)",
+    "fuente": "75 Pa.C.S. Sec. 4923 (https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/75/00.049.023.000..HTM)",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "verificado",
+    "segunda_fuente_auditor": "Commonwealth of Pennsylvania, PA.gov - DMV Vehicle Services, Size and Weight Limitations (https://www.pa.gov/agencies/dmv/vehicle-services/farm-vehicles/size-and-weight-limitations)",
+    "fecha_auditoria": "2026-09-17",
+    "resultado_auditoria": "La segunda fuente (Commonwealth of PA / PennDOT via pa.gov) coincide con el dato del Investigador: distancia kingpin-eje trasero de hasta 41 pies, citando 75 Pa.C.S. Sec. 4923. (Caso general, sin considerar excepcion de motorsports).",
+    "requiere_revision": false,
+    "motivo_revision": "El limite KPRA de Pennsylvania difiere segun el tipo de carga dentro del mismo estado: 41 pies para el caso general, pero 46 pies para remolques usados exclusiva o principalmente para transportar vehiculos en eventos de motorsports. No es claro cual valor corresponde registrar como limite unico del estado.",
+    "resolucion_coordinador": "Se conserva unicamente el limite general (41 pies). La excepcion de 46 pies para motorsports queda fuera del alcance del proyecto (alcance de carga: Dry Van / Reefer 53').",
+    "medida_investigacion": "75 Pa.C.S. Sec. 4923(b.1)(1): \"the distance between the kingpin and the center line of the rear axle or rear axle group.\" Definicion condicional (eje unico -> KPRA; grupo/tandem -> KCRT). El alcance del proyecto (eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Ohio",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Ohio Revised Code Sec. 5577.05, Maximum length of vehicles (https://codes.ohio.gov/ohio-revised-code/section-5577.05); Ohio Department of Transportation, Special Hauling Permits (https://www.transportation.ohio.gov/working/permits/special-hauling-permits) consultado sin encontrar referencia oficial a medida kingpin-eje trasero; Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA/KCRT especifica en el texto completo del Ohio Revised Code Sec. 5577.05 revisado (regula la longitud del semirremolque mediante longitud total: 53 pies en combinacion tractocamion-semirremolque, sin mencion de 'kingpin' ni 'rearmost axle'). Fuentes secundarias no oficiales (agregadores de la industria) mencionan cifras inconsistentes entre si (40 pies para tandem / 38 pies para eje sencillo en unas, 41 pies en otras) que no se pudieron verificar contra una fuente oficial del estado de Ohio ni del Ohio DOT tras busqueda razonable (el documento OS-8 de ODOT no estuvo accesible para lectura de texto).",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Georgia",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Georgia Code Sec. 32-6-24, Length of vehicles and loads (https://law.justia.com/codes/georgia/title-32/chapter-6/article-2/section-32-6-24/); Georgia Rules and Regulations Chapter 672-2, Permits for Vehicles or Loads of Excess Weight or Dimension (https://rules.sos.ga.gov/gac/672-2); Georgia DOT, Title 32 Highways, Bridges and Ferries - Selected Sections (https://www.dot.ga.gov/PartnerSmart/permits/Documents/title32.pdf); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA especifica en las fuentes oficiales consultadas. El acceso directo al texto completo de Georgia Code Sec. 32-6-24 fue bloqueado (error HTTP 403) tanto en Justia como en FindLaw, y el PDF oficial de GDOT (title32.pdf) no pudo decodificarse para lectura de texto. El reglamento GAC Capitulo 672-2 (permisos por exceso de dimension) si se pudo leer completo y no contiene una medida KPRA. Fuentes secundarias no oficiales (agregadores de la industria) citan de forma reiterada una cifra de 41 pies (o 40 pies 6 pulgadas en otra variante) para Georgia, pero esta cifra no se pudo confirmar contra el texto oficial del Georgia Code tras busqueda razonable.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "North Carolina",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies: hasta 41 pies KPRA (caso general)"
+    ],
+    "limite_especifico": "41 pies (caso general)",
+    "fuente": "North Carolina General Statutes G.S. 20-115.1(b)(2) (https://www.ncleg.net/enactedlegislation/statutes/html/bysection/chapter_20/gs_20-115.1.html)",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "verificado",
+    "requiere_revision": false,
+    "motivo_revision": "El limite KPRA de North Carolina difiere segun el tipo de carga dentro del mismo estado: 41 pies para el caso general (G.S. 20-115.1(b)(2)a), pero 46 pies para semirremolques usados exclusiva o principalmente para transportar vehiculos en eventos de motorsports (G.S. 20-115.1(b)(2)b). Se registra el limite del caso general segun el alcance de carga del proyecto (Dry Van / Reefer 53'), pero la excepcion queda documentada para revision del Coordinador.",
+    "resolucion_coordinador": "Se conserva unicamente el limite general (41 pies). La excepcion de 46 pies para motorsports queda fuera del alcance del proyecto (alcance de carga: Dry Van / Reefer 53').",
+    "segunda_fuente_auditor": "North Carolina Department of Transportation (NCDOT), North Carolina Truck Network map for NC State Highway Patrol Troop H, reproduciendo el texto de G.S. 20-115.1(b) (https://connect.ncdot.gov/resources/State-Mapping/Documents/Troop_H.pdf)",
+    "fecha_auditoria": "2026-09-17",
+    "resultado_auditoria": "La segunda fuente (NCDOT, agencia distinta de la legislatura ncleg.net citada por el Investigador) reproduce el texto integro de G.S. 20-115.1(b)(2)a y coincide con el dato registrado: distancia kingpin-eje trasero de hasta 41 pies para el caso general. No se reevaluo la excepcion de motorsports ya resuelta por el Coordinador.",
+    "medida_investigacion": "G.S. 20-115.1(b)(2): \"the rearmost axle, or a point midway between the two rear axles, if the two rear axles are a tandem axle.\" Definicion condicional (eje unico -> KPRA; tandem -> KCRT). El alcance del proyecto (eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "New York",
+    "medida": "KPRA",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies y hasta 53 pies, operado en autopista calificada (qualifying highway) o autopista de acceso designada: hasta 43 pies KPRA"
+    ],
+    "limite_especifico": "43 pies (en autopistas calificadas o de acceso designadas)",
+    "fuente": "New York Vehicle and Traffic Law Sec. 385(3)(e) (https://www.nysenate.gov/legislation/laws/VAT/385)",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "verificado",
+    "requiere_revision": false,
+    "motivo_revision": "El limite KPRA de 43 pies en Nueva York solo aplica cuando el semirremolque opera en una 'qualifying highway' o 'access highway' especificamente designada (incluye tramos de I-95, I-295, I-495 en el area de NYC), ademas de requerir un dispositivo de proteccion trasera (rear-end protective device) de construccion especifica. Fuera de esta red de autopistas designadas, el limite general de longitud de semirremolque en Nueva York es menor (48 pies). Regulacion distinta segun tipo de carretera dentro del mismo estado; se registra el limite aplicable a la red de autopistas designadas/calificadas (consistente con el alcance de rutas primarias usado en los demas estados del proyecto), pero la restriccion por tipo de carretera queda documentada para revision del Coordinador.",
+    "resolucion_coordinador": "Se conserva el limite de 43 pies KPRA (red de autopistas calificadas/de acceso designadas), ya que corresponde al alcance del proyecto (carga OTR / Dry Van / Reefer 53' operando en rutas primarias designadas).",
+    "segunda_fuente_auditor": "New York State Department of Transportation (NYSDOT), Central Permit Office, Notice SHN 07-02 (https://www.dot.ny.gov/nypermits/repository/SHN07-02.pdf)",
+    "fecha_auditoria": "2026-09-17",
+    "resultado_auditoria": "La segunda fuente (NYSDOT, agencia distinta del portal legislativo nysenate.gov citado por el Investigador) indica explicitamente: 'The Kingpin distance of 53' trailers shall not exceed 43 feet from the center of the kingpin to the centerline of the rear axle', consistente con VTL Sec. 385(3)(e) y con el dato registrado (43 pies en autopistas calificadas/de acceso designadas). No se reevaluo la restriccion por tipo de carretera ya resuelta por el Coordinador.",
+    "medida_investigacion": "Sec. 385(3)(e): \"the distance between the kingpin of the semitrailer and the centerline of the rear axle does not exceed forty-three feet.\" Inequivoco: no menciona tandem, KPRA directo (no condicional)."
+  },
+  {
+    "estado": "Indiana",
+    "medida": "KPRA",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies 6 pulgadas, operado en autopista designada del sistema estatal: hasta 43 pies KPRA (caso general)"
+    ],
+    "limite_especifico": "43 pies (caso general, en autopistas del sistema estatal)",
+    "fuente": "Indiana Code IC 9-20-13-4 (reproduccion verificada en https://codes.findlaw.com/in/title-9-motor-vehicles/in-code-sect-9-20-13-4/; no se pudo acceder directamente al texto en el sitio oficial iga.in.gov)",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "verificado",
+    "nota": "fuente ambigua: no se pudo acceder directamente al texto del estatuto en el sitio oficial de la Asamblea General de Indiana (iga.in.gov, la pagina no devolvio contenido legible); se verifico el texto completo via FindLaw, confirmado de forma consistente por multiples busquedas independientes que citan la misma cifra (43 pies caso general / 46 pies motorsports).",
+    "requiere_revision": false,
+    "motivo_revision": "El limite KPRA de Indiana difiere segun el tipo de carga dentro del mismo estado: 43 pies para el caso general, pero 46 pies para semirremolques usados exclusiva o principalmente en conexion con motorsports (con longitud maxima de semirremolque de 57 pies en ese caso, IC 9-20-13-2(a) y IC 9-20-13-4). Ademas, el limite de 43 pies solo aplica en autopistas designadas como parte del sistema estatal de autopistas (IC 8-23-4). Se registra el limite del caso general segun el alcance de carga del proyecto (Dry Van / Reefer 53'), pero ambas particularidades quedan documentadas para revision del Coordinador.",
+    "resolucion_coordinador": "Se acepta el dato tal como lo registro el Investigador: medida KPRA (no KCRT), 43 pies en autopistas del sistema estatal, caso general/OTR. No se reinvestiga la terminologia KPRA/KCRT.",
+    "segunda_fuente_auditor": "Indiana State Police (ISP), Summary of Indiana Size and Weight Laws under Title 9 Article 20 (https://www.in.gov/isp/files/size_weight_laws.pdf)",
+    "fecha_auditoria": "2026-09-17",
+    "resultado_auditoria": "La segunda fuente (Indiana State Police, agencia oficial distinta de FindLaw, la unica fuente citada por el Investigador) indica textualmente: 'Maximum distance between kingpin and rearmost axle of a semi trailer measuring longer than forty-eight feet, six inches, operating on highway that is part of the state highway system is forty-three feet', coincidiendo con el dato registrado (43 pies, caso general). No se reevaluo la terminologia KPRA/KCRT ni la restriccion de autopistas designadas, ya resueltas por el Coordinador.",
+    "medida_investigacion": "Indiana Code IC 9-20-13-4: \"the distance between the kingpin and the rearmost axle of the semitrailer.\" Inequivoco: especifica \"rearmost axle\"."
+  },
+  {
+    "estado": "New Jersey",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Motor-drawn vehicle (semirremolque) de mas de 48 pies y hasta 53 pies: hasta 41 pies KPRA (caso general)"
+    ],
+    "limite_especifico": "41 pies (caso general)",
+    "fuente": "New Jersey Revised Statutes Sec. 39:3-84(a)(4) (https://law.justia.com/codes/new-jersey/title-39/section-39-3-84/; reproduccion confirmada en https://law.onecle.com/new-jersey/title-39/39-3-84.html)",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "verificado",
+    "nota": "fuente ambigua: no se pudo acceder directamente al PDF de la version oficial del estatuto en nj.gotpermits.com (contenido codificado/no legible), se verifico el texto via reproduccion de Justia Law y onecle.com. Una fuente secundaria (Equipment World / agregador de la industria) indica adicionalmente que el limite de 41 pies aplica 'en Interestatales y autopistas designadas unicamente', pero esta restriccion por tipo de autopista no se pudo confirmar directamente contra el texto del estatuto revisado.",
+    "requiere_revision": false,
+    "motivo_revision": "NJ Rev. Stat. 39:3-84 excluye de la limitacion de 41 pies a los vehiculos o combinaciones disenados y utilizados exclusivamente para transportar otros vehiculos automotores (automobile transporters/car haulers), consistente con la excepcion federal de 49 U.S.C. 31111 (motorsports y stinger-steered transporters, minimo 46 pies KPRA / 80 pies de longitud). Regulacion distinta segun tipo de carga dentro del mismo estado. Se registra el limite general de 41 pies segun el alcance del proyecto (Dry Van/Reefer 53' OTR); la excepcion de transportadores de vehiculos, y la posible restriccion por tipo de autopista (Interestatales/designadas) mencionada en fuente secundaria, quedan documentadas para revision del Coordinador.",
+    "resolucion_coordinador": "Se conserva unicamente el limite general (41 pies), siguiendo el mismo criterio aplicado a FL/PA/NC: excepciones por tipo de carga (car haulers/motorsports) quedan fuera del alcance del proyecto (Dry Van/Reefer 53'). La posible restriccion por tipo de autopista, al no estar confirmada contra el texto oficial, no cambia el dato registrado.",
+    "segunda_fuente_auditor": "New Jersey Motor Vehicle Commission / NJDOT, texto oficial de N.J.S.A. 39:3-84(a)(4) reproducido en el portal oficial de permisos nj.gotpermits.com (https://nj.gotpermits.com/njpass/Content/state/NJ/PublicMaterials/39-3-84.pdf) - el mismo sitio que el Investigador senalo como inaccesible por codificacion; el Auditor logro decodificar y leer el PDF completo.",
+    "fecha_auditoria": "2026-09-17",
+    "resultado_auditoria": "La segunda fuente (nj.gotpermits.com, portal oficial de NJ MVC/NJDOT para permisos de sobredimension, distinto de Justia y onecle.com citados por el Investigador) reproduce el texto integro de N.J.S.A. 39:3-84(a)(4) y coincide con el dato registrado: 'a motor-drawn vehicle, the overall length of which is greater than 48 feet and not more than 53 feet, shall be constructed so that the distance between the kingpin of the motor-drawn vehicle and the centerline of its rear axle or rear axle group does not exceed 41 feet'. Tambien confirma textualmente la exclusion para 'any vehicle or combination of vehicles designed, built and utilized solely to transport other motor vehicles' (car haulers), exclusion ya documentada y resuelta por el Coordinador; no se reevaluo esa decision de alcance.",
+    "medida_investigacion": "NJ Rev. Stat. Sec. 39:3-84(a)(4): \"the distance between the kingpin... and the centerline of its rear axle or rear axle group.\" Definicion condicional (eje unico -> KPRA; grupo/tandem -> KCRT). El alcance del proyecto (eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Tennessee",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Remolque/semirremolque de mas de 48 pies con eje trasero tandem, carga distinta de ganado/partes de vehiculos motorizados/vehiculos motorizados: hasta 41 pies entre kingpin y punto medio de los dos ejes traseros (caso general)",
+      "Remolque con eje trasero no-tandem (eje sencillo): hasta 44 pies entre kingpin y eje trasero"
+    ],
+    "limite_especifico": "41 pies (caso general: remolque >48 pies con eje trasero tandem, carga no exceptuada)",
+    "fuente": "Tennessee Code Sec. 55-7-201(c) (https://law.justia.com/codes/tennessee/title-55/chapter-7/part-2/section-55-7-201/; confirmado en https://codes.findlaw.com/tn/title-55-motor-and-other-vehicles/tn-code-sect-55-7-201/)",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "verificado",
+    "requiere_revision": false,
+    "motivo_revision": "El limite KPRA de Tennessee difiere segun el tipo de carga y la configuracion de ejes dentro del mismo estado: 41 pies aplica a remolques de mas de 48 pies con eje trasero tandem transportando carga general, pero esta excepcion NO aplica (es decir, el limite de 41 pies no rige) cuando la carga consiste en ganado (livestock), partes de vehiculos motorizados, o vehiculos motorizados. Ademas existe un limite separado de 44 pies para remolques con eje trasero no-tandem (eje sencillo), configuracion distinta a la de un Dry Van/Reefer 53' estandar (que usa eje tandem). Se registra el limite de 41 pies (caso general, tandem, carga no exceptuada) segun el alcance de carga del proyecto (Dry Van/Reefer 53' OTR); la excepcion de carga y la variante de eje sencillo quedan documentadas para revision del Coordinador.",
+    "resolucion_coordinador": "Se conserva el limite de 41 pies (caso general, eje tandem, carga no exceptuada), consistente con el alcance del proyecto (Dry Van/Reefer 53' con eje tandem, carga no ganado/no vehiculos motorizados). La variante de eje sencillo (44') y la exclusion por tipo de carga quedan fuera de alcance.",
+    "segunda_fuente_auditor": "Tennessee Department of Transportation (TDOT), Rules of Tennessee Department of Transportation, Chapter 1680-07-01 'Overweight and Overdimensional Movements on Tennessee Highways', Rule 1680-07-01-.01(2)(a)6(iii), formulario SS-7039 (https://www.tn.gov/content/dam/tn/tdot/central-services/Ch%201680-07-01%20--%20Overweight%20over-dimensional%20movements%20-%20Final%20Rules%202017.pdf)",
+    "fecha_auditoria": "2026-09-17",
+    "resultado_auditoria": "La segunda fuente (TDOT, agencia oficial distinta de Justia/FindLaw citados por el Investigador) reproduce el texto integro de la regla administrativa que codifica T.C.A. Sec. 55-7-201(c) y coincide con el dato registrado: 'if the towed vehicle exceeds 48 feet in length from the point of attachment to the tractor, the distance between the kingpin and the rearmost axle or a point midway between the two rear axles, if the two rear axles are a tandem axle, shall not exceed 41 feet', con la misma excepcion textual para carga de ganado/automoviles/vehiculos motorizados (52 pies) ya documentada y resuelta por el Coordinador. No se reevaluo la excepcion de carga ni la variante de eje sencillo, ya resueltas por el Coordinador.",
+    "medida_investigacion": "Tennessee Code Sec. 55-7-201(c): caso tandem \"the distance between the kingpin and a point midway between the two (2) rear axles shall not exceed forty-one feet\" (KCRT, 41'); caso eje individual \"the distance between the kingpin and the rearmost axle, if the axles are not a tandem axle, shall not exceed forty-four feet\" (KPRA, 44'). Definicion condicional con limites DISTINTOS por configuracion (no solo el punto de medicion, tambien la cifra). El alcance del proyecto (eje tandem estandar, ya registrado en 41') corresponde al caso KCRT."
+  },
+  {
+    "estado": "Michigan",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Michigan Vehicle Code (Act 300 of 1949) Sec. 257.719, texto oficial completo via legislature.mi.gov (https://www.legislature.mi.gov/documents/mcl/pdf/mcl-300-1949-VI-SIZE-WEIGHT-AND-LOAD.pdf); MCL 257.719 (https://www.legislature.mi.gov/Laws/MCL?objectName=MCL-257-719); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "Se reviso el texto completo y oficial de MCL 257.719 (Michigan Vehicle Code, cortesia de legislature.mi.gov, actualizado a traves de PA 30 of 2025) y no contiene ninguna medida KPRA/KCRT (distancia kingpin-eje trasero). Michigan regula la longitud del semirremolque mediante longitud total: semirremolque de 53 pies sin limite de longitud total de la combinacion en autopistas designadas (Sec. 719(3)(a)), o semirremolque de 50 pies sin restriccion de autopista designada (Sec. 719(2)(d)). Resultados de busqueda web (agregador de la industria, no oficial) mencionaban un supuesto 'wheelbase de 37.5 a 40.5 pies medido desde el kingpin hasta el centro del eje trasero' atribuido a esta seccion, pero esa cifra NO aparece en el texto oficial completo verificado directamente en legislature.mi.gov; se descarta por no poder confirmarse contra fuente oficial. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para Michigan.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Virginia",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque en combinacion tractocamion-semirremolque, hasta 53 pies de longitud: hasta 41 pies KPRA (caso general)"
+    ],
+    "limite_especifico": "41 pies (caso general)",
+    "fuente": "Code of Virginia Sec. 46.2-1112 (https://law.lis.virginia.gov/vacode/title46.2/chapter10/section46.2-1112/)",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "verificado",
+    "requiere_revision": false,
+    "nota": "No se encontro, tras busqueda razonable en fuentes de Virginia (incluyendo VDOT), una excepcion de tipo de carga (p. ej. motorsports) codificada explicitamente en el texto de Sec. 46.2-1112, a diferencia de otros estados del proyecto (FL, PA, NC, Indiana) que si codifican dicha excepcion a nivel estatal. Podria existir un piso federal aplicable via 49 U.S.C. 31111 independientemente de la codificacion estatal, pero no se confirmo contra fuente de Virginia.",
+    "segunda_fuente_auditor": "Virginia Department of Motor Vehicles (DMV), \"Virginia's Size, Weight and Equipment Requirements for trucks, trailers and towed vehicles\", publicacion DMV 109 (07/01/2024) (https://www.dmv.virginia.gov/sites/default/files/forms/dmv109.pdf)",
+    "fecha_auditoria": "2026-09-17",
+    "resultado_auditoria": "La segunda fuente (Virginia DMV, agencia distinta del portal legislativo law.lis.virginia.gov citado por el Investigador) coincide con el dato registrado: 'Provided the spacing between the kingpin of the semitrailer and rearmost axle or a point midway between the rear tandem axle does not exceed 41 feet', citando Virginia Code Sec. 46.2-1105 y 46.2-1112, tanto para autopistas interestatales/designadas como para no-interestatales/no-designadas. No se encontro mencion de excepcion de tipo de carga (motorsports) en esta fuente tampoco, consistente con la nota del Investigador.",
+    "medida_investigacion": "Code of Virginia Sec. 46.2-1112: \"the distance between the kingpin of the semitrailer and the rearmost axle or a point midway between the rear tandem axles does not exceed 41 feet.\" Definicion condicional (eje unico -> KPRA; tandem -> KCRT). El alcance del proyecto (eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Missouri",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Missouri Revised Statutes Sec. 304.170, Regulations as to width, height and length of vehicles (https://revisor.mo.gov/main/OneSection.aspx?section=304.170); Missouri State Highway Patrol, Size and Weight Limitations publication SHP-250 (https://www.mshp.dps.missouri.gov/MSHPWeb/Publications/Brochures/documents/SHP-250.pdf); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA/KCRT especifica en el texto de RSMo Sec. 304.170 revisado via revisor.mo.gov. Missouri regula la longitud del semirremolque mediante longitud total: 53 pies en el sistema interestatal y de autopistas primarias designadas, sin mencion de 'kingpin' ni 'rearmost axle' en el texto de la seccion. Busqueda razonable realizada (incluyendo la publicacion SHP-250 del Missouri State Highway Patrol) sin encontrar fuente oficial que use la medida KPRA/KCRT para Missouri.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Alabama",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 53 pies 6 pulgadas, operado en autopistas designadas conforme a la Sec. 32-9-1 (National Network): hasta 41 pies KPRA (caso general)"
+    ],
+    "limite_especifico": "41 pies (caso general, en autopistas designadas)",
+    "fuente": "Code of Alabama Sec. 32-9-20(a)(2) (https://codes.findlaw.com/al/title-32-motor-vehicles-and-traffic/al-code-sect-32-9-20/; reproduccion confirmada en https://law.justia.com/codes/alabama/title-32/chapter-9/article-2/section-32-9-20/)",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "verificado",
+    "nota": "No se pudo acceder directamente al PDF oficial de dot.state.al.us/business/permits/pdf/AlabamaCode32-9.pdf (contenido no legible como texto) ni al texto directo de law.justia.com (error HTTP 403); se verifico el texto completo via FindLaw, consistente en multiples busquedas independientes que citan la misma cifra (41 pies, Sec. 32-9-20(a)(2)).",
+    "requiere_revision": false,
+    "motivo_revision": "El limite KPRA de 41 pies en Alabama aplica unicamente a semirremolques de mas de 53 pies 6 pulgadas operando en autopistas designadas conforme a la Sec. 32-9-1 (National Network / sistema de autopistas designadas), ademas de requerir un dispositivo de proteccion trasera (rear underride guard) de construccion especifica. No se confirmo si existe un limite KPRA distinto (o ausencia de limite especifico) fuera de esta red de autopistas designadas. Ademas, el mismo Sec. 32-9-20 contiene una excepcion separada para combinaciones truck tractor-semitrailer usadas exclusivamente para transportar vehiculos automotores (auto transporters/stinger-steered), con longitud total de combinacion de hasta 65 pies (80 pies para unidades stinger-steered); no quedo claro si esta excepcion tambien modifica la medida KPRA de 41 pies o solo la longitud total de la combinacion. Regulacion con matices por tipo de carretera y posiblemente por tipo de carga dentro del mismo estado.",
+    "resolucion_coordinador": "Se conserva el limite de 41 pies en autopistas designadas (National Network), consistente con el alcance OTR del proyecto (misma regla aplicada a NY/IN/Indiana). La duda sobre si la excepcion de auto-transporters/stinger-steered tambien modifica la cifra KPRA (y no solo la longitud total) NO se resuelve aqui por no encajar en un patron ya validado: se registra en data/pendientes_arbitraje.json para revision posterior; no bloquea el avance a Auditor.",
+    "segunda_fuente_auditor": "Onecle Legal Research, Code of Alabama Title 32, Section 32-9-20 (https://law.onecle.com/alabama/title-32/32-9-20.html) - base de datos legal independiente distinta de FindLaw y Justia citadas por el Investigador",
+    "fecha_auditoria": "2026-09-17",
+    "resultado_auditoria": "Se intentaron previamente fuentes gubernamentales oficiales (PDF de dot.state.al.us/business/permits/pdf/AlabamaCode32-9.pdf, PDF de dot.state.al.us/publications/OfficeEngineer/pdf/TruckingRegs.pdf, PDF de alea.gov/MCSU-IntrastateCommercialVehicleRegulations.pdf, y el sitio de la Legislatura de Alabama alison.legislature.state.al.us): ninguna permitio extraer texto legible (PDFs con contenido codificado/no legible o sitio SPA sin contenido estatico), igual que reporto el Investigador. La Comprensive Truck Size and Weight Limit Laws de FHWA (ops.fhwa.dot.gov, fuente federal) tampoco contiene una entrada especifica de KPRA para Alabama (solo cubre limites de peso). Ante la imposibilidad de acceder a una fuente gubernamental oficial legible (mismo obstaculo documentado por el Investigador), se uso como segunda fuente independiente Onecle Legal Research (law.onecle.com), base de datos legal distinta de FindLaw y Justia citadas por el Investigador, siguiendo el mismo criterio ya aplicado en este proyecto para Illinois e Indiana. Onecle reproduce el mismo texto estatutario y coincide con el dato registrado: 'Semitrailers exceeding 53 1/2 feet shall only be operated on highways designated pursuant to Section 32-9-1 and shall only be operated when the distance between the kingpin of the semitrailer and the rearmost axle or a point midway between the two rear axles, if the two rear axles are tandem axles, does not exceed 41 feet...'. No se reevaluo la resolucion de alcance ya tomada por el Coordinador (limite de 41 pies en autopistas designadas) ni la duda sin resolver sobre la excepcion de auto-transporters/stinger-steered, que permanece documentada en data/pendientes_arbitraje.json para arbitraje humano posterior.",
+    "resolucion_coordinador_final": "El usuario confirmo el dato: 41 pies KPRA. La duda sobre si la excepcion de auto-transporters/stinger-steered redefine tambien el KPRA queda cerrada sin cambiar el dato (se mantiene 41 pies para el caso general); no se investiga mas. Pendiente marcado como resuelto en data/pendientes_arbitraje.json (2026-09-18).",
+    "medida_investigacion": "Code of Alabama Sec. 32-9-20(a)(2): \"the rearmost axle or a point midway between the two rear axles, if the two rear axles are tandem axles.\" Definicion condicional identica en estructura a la federal: eje unico -> KPRA; eje tandem -> KCRT. El alcance del proyecto (eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Alaska",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Alaska Administrative Code 17 AAC 25.013 (https://www.law.cornell.edu/regulations/alaska/17-AAC-25.013; texto completo tambien en https://dot.alaska.gov/mscvc/webdocs/17AAC25.pdf); Alaska Statutes AS 19.10.060 (referenciado); Alaska DOT&PF Administrative Permit Manual: Oversize and Overweight Permits (https://dot.alaska.gov/mscvc/assets/webdocs/permits_manual.pdf); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA/KCRT especifica (distancia kingpin-eje trasero) en 17 AAC 25.013 (que regula limites de peso y espaciamiento de ejes segun formula de puente, no distancia kingpin-eje) ni en las fuentes de Alaska DOT&PF consultadas. Alaska regula la longitud del semirremolque mediante longitud total: semirremolques para carga general (vanes, plataformas) no deben exceder 53 pies. El Manual de Permisos (PDF) no pudo decodificarse como texto legible (aparenta ser una imagen escaneada) para verificacion adicional. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para Alaska.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Arizona",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Arizona Revised Statutes Sec. 28-1095 (https://www.azleg.gov/ars/28/01095.htm); Arizona Administrative Code Title 17, Chapter 6 (R17-6), Oversize/Overweight Permits (https://apps.azsos.gov/public_services/Title_17/17-06.pdf); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA especifica en el texto oficial de A.R.S. Sec. 28-1095 (texto completo revisado via azleg.gov), que regula la longitud del semirremolque mediante longitud total: hasta 57 pies 6 pulgadas para semirremolque en combinacion truck tractor-semirremolque (sin mencion de 'kingpin' ni 'rearmost axle'). Fuentes secundarias no oficiales (agregadores de la industria) citan de forma reiterada una cifra de 41 pies KPRA para Arizona, pero con resultados de busqueda inconsistentes entre si (una fuente cita 41 pies 'measured to the center of the rear tandem assembly', otra cita el limite federal generico de 46 pies bajo 23 CFR 658.13(h) para operar sin permiso) y ninguna se pudo confirmar contra el texto oficial de ARS 28-1095 ni del Arizona Administrative Code Title 17 Ch. 6 revisado. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para Arizona.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Arkansas",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Arkansas Code Annotated Sec. 27-35-208, Length of vehicles (https://codes.findlaw.com/ar/title-27-transportation/ar-code-sect-27-35-208.html; https://law.justia.com/codes/arkansas/title-27/subtitle-3/chapter-35/subchapter-2/section-27-35-208/); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA especifica en el texto de Ark. Code Ann. Sec. 27-35-208 revisado (via FindLaw), que regula la longitud del semirremolque mediante longitud total: el estado no puede imponer un limite de longitud de semirremolque/remolque menor a 53 pies 6 pulgadas en combinacion con truck tractor, sin mencion de 'kingpin' ni 'rearmost axle'. No se pudo acceder al documento oficial de reglas de permisos de ARDOT (2023-Permit-Rules.pdf, error HTTP 403) para verificacion adicional. Fuentes secundarias no oficiales citan cifras inconsistentes entre si (41 pies en una busqueda, 38 pies en otra) que no se pudieron confirmar contra fuente oficial de Arkansas. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para Arkansas.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Colorado",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Colorado Revised Statutes Sec. 42-4-504, Height and length of vehicles (https://codes.findlaw.com/co/title-42-vehicles-and-traffic/co-rev-st-sect-42-4-504/); CDOT Freight and Permitting, Legal Vehicle Dimensions (CDOT FYI 1) (https://freight.colorado.gov/sites/g/files/lrnvjt896/files/documents/CDOT%20FYI%20Legal%20Load%20and%20Permit%20Info_0.pdf, no se pudo acceder por error HTTP 403); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA especifica en el texto de C.R.S. Sec. 42-4-504 revisado (via FindLaw), que regula la longitud del semirremolque mediante longitud total: sin limite de longitud total de la combinacion truck tractor-semirremolque cuando el semirremolque es de 57 pies 4 pulgadas o menos, sin mencion de 'kingpin' ni 'rearmost axle'. No se pudo acceder directamente al documento oficial CDOT FYI 1 (Legal Vehicle Dimensions) por error HTTP 403 para verificacion adicional. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para Colorado.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Connecticut",
+    "medida": "KPRA",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies y hasta 53 pies, operado en rutas designadas (rutas US y CT numeradas 1-399, 450, 476, 508, 693, 695, y el sistema de autopistas interestatales y de defensa): hasta 43 pies KPRA (caso general)"
+    ],
+    "limite_especifico": "43 pies (caso general, en rutas designadas)",
+    "fuente": "Connecticut General Statutes Sec. 14-262(c) (https://codes.findlaw.com/ct/title-14-motor-vehicles-use-of-the-highway-by-vehicles-gasoline/ct-gen-st-sect-14-262.html; reproduccion confirmada en https://law.justia.com/codes/connecticut/title-14/chapter-248/section-14-262/); Connecticut DOT, Vehicle Size and Weight Limitations (https://portal.ct.gov/-/media/dmv/vehiclesizeandweightlimitationspdf.pdf?la=en)",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "verificado",
+    "requiere_revision": false,
+    "motivo_revision": "El limite KPRA de 43 pies en Connecticut solo aplica a semirremolques de mas de 48 y hasta 53 pies operando en una red de rutas designadas especificas (rutas US/CT numeradas 1-399, 450, 476, 508, 693, 695, y el sistema interestatal/de defensa), mas un tramo de hasta una milla desde esas rutas para acceso a terminales, estaciones de combustible, talleres, areas de descanso y puntos de carga/descarga. Fuera de esta red designada no se confirmo un limite KPRA especifico. Regulacion distinta segun tipo de carretera dentro del mismo estado; se registra el limite aplicable a la red de rutas designadas (consistente con el alcance OTR del proyecto), pero la restriccion por tipo de carretera queda documentada para revision del Coordinador.",
+    "resolucion_coordinador": "Se conserva el limite de 43 pies en la red de rutas designadas, aplicando la misma regla ya usada para NY/Indiana/Alabama (alcance OTR en rutas primarias).",
+    "segunda_fuente_auditor": "Connecticut Department of Transportation, FAQ 'What is the legal length of the semi-trailer' (https://portal.ct.gov/dot/knowledge-base/articles/faqs/what-is-the-legal-length-of-the-semi-trailer) - pagina distinta del PDF de CT DMV (vehiclesizeandweightlimitationspdf.pdf) ya citado por el Investigador, y de las bases de datos legales (FindLaw/Justia) usadas por el Investigador para el texto estatutario.",
+    "fecha_auditoria": "2026-09-17",
+    "resultado_auditoria": "La segunda fuente (CT DOT FAQ, portal.ct.gov/dot/knowledge-base) coincide con el dato registrado: 'The maximum allowable measurement from the center of the kingpin to the center of the rear-most axle in contact with the road cannot exceed 43 feet', aplicable a semirremolques de 53 pies, con la misma restriccion de operar solo en las rutas designadas (mas hasta 1 milla de esas rutas para carga/descarga, reparaciones, etc.). No se reevaluo la restriccion por red de rutas designadas, ya resuelta por el Coordinador.",
+    "medida_investigacion": "Connecticut General Statutes Sec. 14-262(c): \"distance of no more than forty-three feet between the kingpin and the center of the rearmost axle with wheels in contact with the road surface.\" Inequivoco: especifica \"rearmost axle\"."
+  },
+  {
+    "estado": "Delaware",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Delaware Code Title 21, Chapter 45, Size, Weight and Load (https://delcode.delaware.gov/title21/c045/index.html); DelDOT Oversize/Overweight Permit Policy Manual (https://deldot.gov/CLF4Apps/osow/pdfs/policy.pdf); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA/KCRT especifica en el texto completo de Delaware Code Title 21, Capitulo 45 (Sec. 4501 a 4513) revisado via delcode.delaware.gov, que regula la longitud del semirremolque mediante longitud total: 53 pies en autopistas interestatales y rutas US, sin mencion de 'kingpin' ni 'rearmost axle'. Busqueda razonable realizada (incluyendo el manual de permisos de DelDOT) sin encontrar fuente oficial que use la medida KPRA/KCRT para Delaware.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Hawaii",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Hawaii Revised Statutes Sec. 291-34, Size of vehicles; width, height, and length (https://codes.findlaw.com/hi/division-1-government/hi-rev-st-sect-291-34.html; reproduccion confirmada en https://law.justia.com/codes/hawaii/title-17/chapter-291/section-291-34/); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA/KCRT especifica en el texto de HRS Sec. 291-34 revisado, que regula la longitud del semirremolque mediante longitud total: hasta 48 pies para el semirremolque individual y hasta 65 pies para la combinacion tractocamion-semirremolque, sin mencion de 'kingpin' ni 'rearmost axle'. Hawaii mantiene un limite de longitud total mas restrictivo que la mayoria de los demas estados (no adopta semirremolques de 53 pies), consistente con no requerir una medida KPRA. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para Hawaii.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Idaho",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Idaho Code Sec. 49-1010, Size of vehicles and loads (https://legislature.idaho.gov/statutesrules/idstat/title49/t49ch10/sect49-1010/; reproduccion via https://law.justia.com/codes/idaho/title-49/chapter-10/section-49-1010/); Idaho Transportation Department, Permit Condition Manual (https://itd.idaho.gov/wp-content/uploads/2018/02/Permit_Manual.pdf); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA general especifica en Idaho Code Sec. 49-1010 ni en el Permit Condition Manual de ITD consultados. Idaho regula la longitud mediante longitud total: semirremolque de hasta 53 pies (sin carga con sobrehang) y combinaciones de hasta 65 pies sin permiso en rutas no restringidas ('white coded routes'). La unica referencia a 'kingpin' encontrada en el estatuto es la definicion de combinacion 'stinger-steered' (dromedary), donde el kingpin se ubica 5 pies o mas detras del centroide del eje/ejes traseros, umbral definitorio para transportadores de vehiculos motorizados (auto-haulers de hasta 75 pies) y no un limite KPRA general aplicable a un semirremolque Dry Van/Reefer estandar. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT general para Idaho.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Iowa",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Iowa Code Sec. 321.457, Maximum length (https://law.justia.com/codes/iowa/title-viii/chapter-321/section-321-457/; texto oficial referenciado en https://www.legis.iowa.gov/docs/code/321.457.pdf, no se pudo decodificar como texto legible); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-17",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "motivo_revision": "Dos problemas sin resolver: (1) Iowa Code 321.457 exceptua de este limite de 40 pies a los semirremolques usados principalmente para transporte de ganado (livestock), lo que constituye regulacion distinta segun tipo de carga dentro del mismo estado (no aplica al alcance Dry Van/Reefer del proyecto, pero queda documentado); (2) no se pudo acceder al texto oficial completo de legis.iowa.gov (PDF no legible, pagina de busqueda con error HTTP 500) para verificar directamente la cifra de 40 pies, y una fuente secundaria no oficial (bigtruckguide.com) contradice el dato indicando que Iowa no tiene medida KPRA especificada. Se registra 40 pies (caso general) segun las citas estatutarias encontradas en busquedas independientes, pero requiere confirmacion contra el texto oficial antes de pasar a Auditor.",
+    "resolucion_coordinador": "La excepcion de ganado (livestock) se descarta por estar fuera de alcance (mismo criterio que Illinois/Tennessee). La contradiccion con la fuente secundaria 'None Specified' NO se resuelve aqui por ser una discrepancia real, no un patron ya validado: se registra en data/pendientes_arbitraje.json. El dato de 40 pies avanza a Auditor sin bloquear el bucle; si el Auditor tampoco logra confirmar contra fuente oficial o encuentra contradiccion real, debe marcarlo 'conflicto' y esa entrada tambien se registrara en la lista de pendientes en vez de detener el flujo.",
+    "fecha_auditoria": "2026-09-17",
+    "resultado_auditoria": "El Auditor logro leer directamente (via descarga y lectura del PDF, no solo fetch de texto) el texto oficial completo y VIGENTE de Iowa Code Sec. 321.457 'Maximum length' en dos versiones distintas servidas por legis.iowa.gov: (a) la edicion actual 'Iowa Code 2026' (https://www.legis.iowa.gov/docs/code/321.457.pdf, generada 2025-12-11) y (b) la version 'Iowa Code 2009 + Supplement' (https://www.legis.iowa.gov/docs/code/2010/321.457.pdf, generada 2018-04-03). NINGUNA de las dos contiene una medida de distancia kingpin-eje trasero (KPRA): el texto vigente solo regula longitud total por tipo de vehiculo/combinacion (subsecciones a-p: camion sencillo 45', semirremolque en combinacion tractocamion-semirremolque 53', lowboy 57', etc.), sin mencionar la palabra 'kingpin' en ningun punto. Esto confirma la fuente secundaria bigtruckguide.com ('None Specified' para Iowa) contra el texto oficial completo. Investigacion adicional en el historial legislativo oficial de Iowa (tambien en legis.iowa.gov) confirma que la medida de 40 pies SI existio: fue creada como nueva subseccion 6 de 321.457 por el House File 747 de 1980 (texto: 'A semitrailer shall not have a total length of more than forty-five feet nor a distance between the kingpin and the center of the rearmost axle of a semitrailer in excess of forty feet, except a semitrailer used principally for hauling livestock...'), promulgado el 21 de marzo de 1980. Es decir, el Investigador cito correctamente el texto historico/original de la subseccion kingpin de 321.457, pero esa subseccion ya no aparece en el texto oficial vigente (confirmado igual en la edicion 2009+Supplement de 2018 y en la edicion 2026), por lo que fue derogada o removida en algun momento entre 1980 y 2009 (el Auditor no pudo determinar la ley de derogacion exacta dentro del alcance razonable de esta auditoria). Este es un CONFLICTO REAL segun los criterios del Coordinador: el dato del Investigador (40 pies, citando Iowa Code 321.457) corresponde a una version historica/derogada del estatuto, mientras que el texto oficial vigente de esa misma seccion no contiene ninguna medida KPRA, confirmando 'None Specified' de la fuente secundaria bigtruckguide.com. No se decide aqui cual version debe prevalecer (si el proyecto debe registrar el dato historico o 'no encontrado' segun el texto vigente); se reporta al Coordinador para arbitraje.",
+    "conflicto_detalle": {
+      "version_investigador": "40 pies KPRA (caso general, exceptuando semirremolques usados principalmente para transporte de ganado), citando 'Iowa Code Sec. 321.457' sin especificar version/fecha del texto.",
+      "version_auditor": "El texto OFICIAL VIGENTE de Iowa Code Sec. 321.457 (verificado por el Auditor en dos ediciones: 'Iowa Code 2026', PDF generado 2025-12-11, https://www.legis.iowa.gov/docs/code/321.457.pdf; y 'Iowa Code 2009 + Supplement', PDF generado 2018-04-03, https://www.legis.iowa.gov/docs/code/2010/321.457.pdf) NO contiene ninguna medida de distancia kingpin-eje trasero; regula la longitud unicamente por longitud total del vehiculo/combinacion. La cifra de 40 pies SI existio en el pasado como subseccion 6 de 321.457, creada por Iowa House File 747 (1980 Session), promulgada el 21-marzo-1980 (texto original verificado por el Auditor: https://www.legis.iowa.gov/docs/publications/LGI/68/HF747.pdf), pero ya no aparece en el Iowa Code vigente ni en la version de 2009+Supplement (2018), es decir fue derogada/removida en fecha no determinada por el Auditor entre 1980 y 2009. Esto confirma la fuente secundaria no oficial bigtruckguide.com, que indica 'None Specified' para Iowa."
+    },
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "fuente ambigua: no se pudo acceder ni al texto directo de Justia (error HTTP 403 en fetch) ni decodificar el PDF oficial de legis.iowa.gov (contenido codificado/no legible); el dato (40 pies KPRA, exceptuando semirremolques usados principalmente para transporte de ganado) se confirmo mediante multiples resultados de busqueda independientes que citan el mismo texto estatutario de Iowa Code 321.457. Una fuente secundaria no oficial (bigtruckguide.com) indica 'None Specified' para Iowa, contradiciendo el dato encontrado en las citas del estatuto; esta discrepancia no se pudo resolver contra el texto oficial completo tras busqueda razonable.",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Kansas",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Kansas Statutes Chapter 8. Article 19, Section 8-1904 (https://ksrevisor.gov/statutes/chapters/ch08/008_019_0004.html); Federal FHWA Semitrailer Length Limitations on National Truck Network by State (https://ops.fhwa.dot.gov/FREIGHT/freight_analysis/nat_freight_stats/docs/08factsfigures/table3_5.htm); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA especifica en el texto oficial de Kansas Statutes K.S.A. 8-1904 revisado via ksrevisor.gov. Kansas regula la longitud del semirremolque mediante longitud total: 59.5 pies maximo para semirremolque en combinacion con truck tractor, sin mencion de 'kingpin' ni 'rearmost axle'. La revision de la tabla federal FHWA de limitaciones de longitud de semirremolque por estado (que documenta excepciones de KPRA para varios estados como California, Indiana, Wisconsin) no incluye ninguna nota o excepcion de KPRA para Kansas, sugiriendo que Kansas no codifica una medida KPRA especifica. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para Kansas.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Kentucky",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semitrailer operado en STAA (Surface Transportation Assistance Act) motor vehicles: hasta 41 pies KPRA (medido al centro del eje trasero)"
+    ],
+    "limite_especifico": "41 pies (medido al centro del eje trasero o grupo de ejes traseros)",
+    "fuente": "Kentucky Administrative Regulation (KAR) 603 KAR 5:250, Section 6(4) (https://apps.legislature.ky.gov/law/kar/titles/603/005/250/)",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "fuente_unica": true,
+    "nota": "Regulacion administrativa oficial de Kentucky que especifica explicitamente: 'kingpin distance of trailers as measured to the center of the rear axle and the amount of rear overhang as measured from the center of the rear axle to the rear of the trailer. These dimensions shall not exceed a forty-one (41) foot kingpin distance nor a rear overhang of five (5) feet'. Fuente: KAR 603 KAR 5:250, Section 6(4).",
+    "requiere_revision": false,
+    "fecha_auditoria": "2026-09-18",
+    "resultado_auditoria": "Se intento localizar una segunda fuente oficial independiente distinta de apps.legislature.ky.gov (portal de la Legislative Research Commission ya citado por el Investigador): se reviso la pagina de KYTC 'Legal Dimensions' (drive.ky.gov/Motor-Carriers/Overweight-Over-Dimensional/Pages/OWOD-Legal-Dimensions.aspx), que no contiene la medida kingpin-eje trasero; se intento acceder al 'Permits Guidance Manual' oficial de KYTC (transportation.ky.gov/.../Permits.pdf), pero el archivo (varios MB) no pudo decodificarse como texto legible; se busco en Cornell LII (law.cornell.edu/regulations/kentucky) sin encontrar reproduccion de 603 KAR 5:250; y se reviso la tabla compilatoria de FHWA (ops.fhwa.dot.gov/freight/policy/rpt_congress/truck_sw_laws/app_a.htm) sin poder acceder a la seccion especifica de Kentucky. Tras busqueda razonable, no se encontro una segunda fuente oficial independiente y accesible que reproduzca el dato; se mantiene 'alta' con fuente_unica.",
+    "medida_investigacion": "603 KAR 5:250, Section 6(4): \"measured to the center of the rear axle\" -- el texto de esta seccion NO distingue explicitamente eje unico vs. tandem. Sin embargo, 603 KAR 5:250, Seccion 2 remite explicitamente a 23 CFR Part 658 para todo lo relacionado con la National Truck Network (\"Selection of the National Truck Network highways... shall be governed by 23 CFR Part 658\"), y 23 CFR 658.19 define \"center of the rear axle, if single, or the center of a group of rear axles\". Por decision del usuario (2026-09-18), se infiere KCRT para el caso tandem del proyecto a partir de esta remision federal, aunque la Seccion 6(4) no repite la distincion textualmente.",
+    "medida_confianza": "inferida (no textual directa) por remision explicita a 23 CFR 658"
+  },
+  {
+    "estado": "Louisiana",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Louisiana Revised Statutes Title 32, Sections 32:380-32:390 (https://law.justia.com/codes/louisiana/revised-statutes/title-32/); Louisiana Department of Transportation and Development (DOTD), Rules and Regulations (https://dotd.la.gov/media/2u4lj431/rules-and-regulations-1.pdf); Federal FHWA Semitrailer Length Limitations on National Truck Network by State (https://ops.fhwa.dot.gov/FREIGHT/freight_analysis/nat_freight_stats/docs/08factsfigures/table3_5.htm); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA especifica en Louisiana Revised Statutes Title 32 (Motor Vehicles and Traffic Regulation) revisadas, que regulan la longitud del semirremolque mediante longitud total: 59 pies 6 pulgadas para la seccion de semirremolque de una combinacion tractor-semirremolque (RS 32:382), sin mencion de 'kingpin' ni 'rearmost axle'. La revision de la tabla federal FHWA de limitaciones de longitud de semirremolque por estado (que documentan excepciones de KPRA para estados como California, Indiana, Wisconsin) no incluye ninguna nota o excepcion de KPRA para Louisiana. Louisiana aparece en esa tabla federal como estado con limit de 59-6 (59 pies 6 pulgadas) sin anotaciones de KPRA adicionales, consistente con la ausencia de regulacion KPRA especifica a nivel estatal. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para Louisiana.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Maine",
+    "medida": "KPRA",
+    "configuraciones_permitidas": [
+      "Semirremolque de 48-53 pies de longitud estructural: hasta 45 pies 6 pulgadas KPRA (medido desde kingpin al centro del eje trasero)"
+    ],
+    "limite_especifico": "45 pies 6 pulgadas (medido desde kingpin al centro del eje trasero)",
+    "fuente": "Maine Revised Statutes Annotated, Title 29-A, Section 2390 (https://legislature.maine.gov/statutes/29-A/title29-Asec2390.html; reproduccion confirmada en https://codes.findlaw.com/me/title-29-a-motor-vehicles/me-rev-st-tit-29-a-sect-2390.html)",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "verificado",
+    "nota": "Regulacion vigente de Maine que especifica explicitamente en subseccion (1), paragrafo J(1): 'The wheelbase of the semitrailer, measured as the distance from the kingpin to the center of the rearmost axle of the semitrailer, may not exceed 45 feet, 6 inches.' Aplicable a semirremolques de 48-53 pies de longitud estructural operando bajo las disposiciones de longitud extendida de Maine.",
+    "requiere_revision": false,
+    "segunda_fuente_auditor": "Maine Legislature, 129th Legislature, Public Law Chapter 606, 'An Act To Amend the Law Governing Maximum Length Limits for Truck Tractor Semitrailers' (https://www.legislature.maine.gov/legis/bills/bills_129th/chapters/PUBLIC606.asp) - texto de la ley promulgada que enmendo 29-A MRSA Sec. 2390, distinto de la pagina de codificacion del estatuto (legislature.maine.gov/statutes) y de FindLaw citadas por el Investigador.",
+    "fecha_auditoria": "2026-09-18",
+    "resultado_auditoria": "La segunda fuente (texto oficial de la ley promulgada Public Law Chapter 606) muestra la enmienda textual: 'The wheelbase of the semitrailer, measured as the distance from the kingpin to the center of the rearmost axle of the semitrailer, may not exceed [43] 45 feet, 6 inches', confirmando que el limite vigente es 45 pies 6 pulgadas (aumentado desde 43 pies), coincidiendo con el dato registrado por el Investigador.",
+    "medida_investigacion": "Title 29-A Sec. 2390(1)(J)(1): \"the distance from the kingpin to the center of the rearmost axle of the semitrailer.\" Inequivoco: \"rearmost axle\"."
+  },
+  {
+    "estado": "Maryland",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semitrailer en combinacion con truck tractor (48-53 pies), operado en Interstate y rutas designadas por USDOT: hasta 41 pies KPRA (medido desde kingpin al centro de los ejes traseros tandem)"
+    ],
+    "limite_especifico": "41 pies (medido desde kingpin al centro de los ejes traseros tandem)",
+    "fuente": "Maryland Transportation Code Section 24-104.1 (https://codes.findlaw.com/md/transportation/md-code-trans-sect-24-104-1.html; reproduccion confirmada en https://law.justia.com/codes/maryland/transportation/title-24/subtitle-1/section-24-104-1/)",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "fuente_unica": true,
+    "nota": "Regulacion vigente de Maryland que especifica: 'The wheelbase of the semitrailer, measured as the distance from the kingpin to the center of the rear tandem axles, may not exceed 41 feet in length.' Aplicable a semitrailers en combinacion con truck tractors de 48-53 pies operando en Interstate y rutas designadas por USDOT.",
+    "requiere_revision": false,
+    "motivo_revision": "El limite KPRA de 41 pies en Maryland aplica unicamente cuando el semitrailer opera en Interstate system highways o rutas designadas por el Secretario en coordinacion con USDOT. Fuera de esta red de rutas designadas no se confirmo un limite KPRA especifico o podrian aplicar limitaciones distintas. Regulacion distinta segun tipo de carretera dentro del mismo estado; se registra el limite aplicable a la red de rutas designadas/Interstate (consistente con alcance OTR del proyecto), pero la restriccion por tipo de carretera requiere aclaracion.",
+    "resolucion_coordinador": "Se conserva el limite de 41 pies en Interstate/rutas designadas por USDOT, aplicando la misma regla ya usada para NY/Indiana/Alabama/Connecticut (alcance OTR en rutas primarias). No se detiene el bucle. Nota del Auditor: esta resolucion de alcance no se reabre; solo se audito el valor numerico (41 pies).",
+    "fecha_auditoria": "2026-09-18",
+    "resultado_auditoria": "Se intento localizar una segunda fuente oficial independiente distinta de FindLaw/Justia (citadas por el Investigador para el texto del Transportation Code): se intento el PDF oficial del Maryland Oversize/Overweight Hauling Permit Manual de MDOT SHA (roads.maryland.gov/oots/md_hauling_permit_manual.pdf), pero el archivo no pudo decodificarse como texto legible (contenido binario/codificado); se reviso la pagina de MDOT SHA 'Overdimensional Permit Limitations' (roads.maryland.gov/mdotsha), que no contiene la medida kingpin-eje trasero; se revisaron varias secciones de COMAR Titulo 11.04.01 (regs.maryland.gov, regulacion ejecutiva de MDOT SHA, chapter index y secciones .01-1, .06) sin encontrar una provision de kingpin/tandem axle; y se intento el PDF oficial del Codigo de Maryland en mgaleg.maryland.gov (gtr.pdf, 1547 paginas), que tampoco pudo decodificarse como texto legible. Tras busqueda razonable, no se encontro una segunda fuente oficial independiente y accesible que reproduzca el dato numerico; se mantiene 'alta' con fuente_unica. No se reabre la resolucion de alcance (Interstate/rutas designadas) ya tomada por el Coordinador.",
+    "medida_investigacion": "Transportation Code Sec. 24-104.1: \"distance from the kingpin to the center of the rear tandem axles.\" Inequivoco: KCRT directo (no condicional, siempre tandem)."
+  },
+  {
+    "estado": "Minnesota",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies hasta 53 pies: hasta 43 pies KPRA (caso general, statewide)"
+    ],
+    "limite_especifico": "43 pies (medido desde kingpin al centro del grupo de ejes traseros)",
+    "fuente": "Minnesota Statutes Section 169.81, Subdivision 2(b) (https://codes.findlaw.com/mn/transportation-ch-160-174a/mn-st-sect-169-81/; confirmado en revisor.mn.gov: https://www.revisor.mn.gov/statutes/cite/169.81/)",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "verificado",
+    "nota": "Regulacion vigente de Minnesota que especifica: 'the distance from the kingpin to the centerline of the rear axle group of the semitrailer does not exceed 43 feet.' Se aplica statewide a semirremolques que excedan 48 pies pero no superen 53 pies en su combinacion con tractocamion.",
+    "requiere_revision": false,
+    "segunda_fuente_auditor": "Minnesota Department of Transportation (MnDOT), Office of Freight & Commercial Vehicle Operations, folleto oficial 'Transporting Oversize / Overweight Loads in Minnesota' (2017) (https://www.itascacountymn.gov/DocumentCenter/View/4103/Oversize-Overweight-Loads-in-Minnesota-PDF) - publicacion oficial de MnDOT, agencia distinta del portal legislativo revisor.mn.gov y de la base de datos legal FindLaw citadas por el Investigador.",
+    "fecha_auditoria": "2026-09-18",
+    "resultado_auditoria": "La segunda fuente (folleto oficial de MnDOT, Office of Freight & Commercial Vehicle Operations) coincide con el dato registrado: en la tabla de 'Maximum Legal Dimensions' indica 'Semi-trailer, of two-vehicle combination: 48' (or 53' if kingpin to center of rear axle group distance is 43' or less)', aplicable a las autopistas del estado sin restriccion de red especifica, consistente con el caracter statewide del dato del Investigador (MN Stat. Sec. 169.81 Subd. 2(b)).",
+    "medida_investigacion": "Statutes Sec. 169.81 Subd. 2(b): \"the distance from the kingpin to the centerline of the rear axle group.\" Inequivoco: KCRT directo."
+  },
+  {
+    "estado": "Massachusetts",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Massachusetts General Laws Chapter 90, Section 19 (https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXIV/Chapter90/Section19); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA/KCRT especifica en MGL Ch. 90 Sec. 19 revisado, que regula la longitud del semirremolque mediante longitud total, sin mencion de 'kingpin' ni 'rearmost axle'. La tabla federal FHWA de excepciones KPRA por estado no lista a Massachusetts. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para Massachusetts.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Mississippi",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Mississippi Code Annotated Title 63, longitud total de vehiculos (via law.justia.com/codes/mississippi/); tabla federal FHWA Semitrailer Length Limitations by State; Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA especifica en el Mississippi Code Title 63 revisado, que regula la longitud del semirremolque mediante longitud total (53 pies), sin mencion de 'kingpin' ni 'rearmost axle'. La tabla federal FHWA no especifica medida KPRA para Mississippi. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para Mississippi.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Montana",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Montana Code Annotated 61-10-104 (via leg.mt.gov); tabla federal FHWA Semitrailer Length Limitations by State; Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA especifica en MCA 61-10-104 revisado, que regula la longitud del semirremolque mediante longitud total (53 pies), sin mencion de 'kingpin' ni 'rearmost axle'. La tabla federal FHWA sugiere conformidad con el limite federal sin excepcion KPRA estatal para Montana. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para Montana.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Nebraska",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Nebraska Revised Statutes 60-6,290 (via nebraskalegislature.gov); tabla federal FHWA Semitrailer Length Limitations by State; Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA especifica en NRS 60-6,290 revisado, que regula la longitud del semirremolque mediante longitud total (53 pies), sin mencion de 'kingpin' ni 'rearmost axle'. La tabla federal FHWA no lista medida KPRA para Nebraska. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para Nebraska.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Nevada",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Nevada Revised Statutes Chapter 484D (https://www.leg.state.nv.us/nrs/NRS-484D.html); Nevada Administrative Code Chapter 484D (https://www.leg.state.nv.us/nac/nac-484D.html); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA/KCRT especifica en Nevada Revised Statutes Chapter 484D ni en Nevada Administrative Code Chapter 484D revisados. Nevada regula la longitud del semirremolque mediante longitud total: 53 pies en combinacion con tractocamion, sin mencion de 'kingpin' ni 'rearmost axle'. La revision de la tabla federal FHWA de limitaciones de longitud de semirremolque por estado (que documenta excepciones de KPRA para estados como California, Indiana, Wisconsin) no incluye ninguna nota o excepcion de KPRA para Nevada. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para Nevada.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "New Hampshire",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies en combinacion con tractocamion de 53 pies: hasta 41 pies KPRA (caso general)"
+    ],
+    "limite_especifico": "41 pies (en Interstate y rutas designadas)",
+    "fuente": "New Hampshire Revised Statutes RSA 266:11 (https://gc.nh.gov/rsa/html/XXI/266/266-11.htm)",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "verificado",
+    "nota": "Regulacion vigente de New Hampshire que especifica explicitamente que semirremolques en exceso de 48 pies en combinacion no deben operar si la distancia entre el kingpin y el centerline del eje trasero o punto medio de tandem supera 41 pies. Solo permitido en Interstates y autopistas designadas. Requiere dispositivo de proteccion trasera de construccion especifica.",
+    "requiere_revision": false,
+    "motivo_revision": "El limite KPRA de 41 pies en New Hampshire solo aplica cuando el semirremolque (de mas de 48 pies) opera en Interstates o autopistas designadas. No se confirmo limite KPRA especifico fuera de estas rutas designadas. Regulacion distinta segun tipo de carretera dentro del mismo estado; se registra el limite aplicable a rutas designadas/Interstate (consistente con alcance OTR del proyecto).",
+    "resolucion_coordinador": "Se conserva el limite de 41 pies en Interstate/rutas designadas, aplicando la misma regla ya usada para NY/Indiana/Alabama/Connecticut/Maryland (alcance OTR en rutas primarias). Nota del Auditor: esta resolucion de alcance no se reabre; solo se audito el valor numerico (41 pies).",
+    "segunda_fuente_auditor": "Justia U.S. Law, 2025 New Hampshire Revised Statutes, Title XXI, Chapter 266, Section 266:11 - Length (https://law.justia.com/codes/new-hampshire/title-xxi/chapter-266/section-266-11/) - base de datos legal independiente distinta del portal oficial gc.nh.gov citado por el Investigador.",
+    "fecha_auditoria": "2026-09-18",
+    "resultado_auditoria": "Se intento acceder a fuentes gubernamentales alternativas de New Hampshire (NH State Police Troop G Motor Carrier Enforcement FAQs, nhsp.dos.nh.gov; NH DOT truck-weights.pdf, dot.nh.gov; NH DMV Overweight Certification, dmv.nh.gov) sin exito: todas devolvieron error HTTP 403 o no contenian la medida KPRA. Se probo tambien FindLaw (codes.findlaw.com), que devolvio error 404. Ante la imposibilidad de acceder a una segunda fuente gubernamental directa tras busqueda razonable, se uso como segunda fuente independiente Justia U.S. Law (base de datos legal distinta del portal oficial gc.nh.gov citado por el Investigador), siguiendo el mismo criterio ya aplicado en este proyecto para Illinois/Indiana/Alabama. Justia reproduce el mismo texto estatutario de RSA 266:11 y coincide con el dato registrado: 'any semi-trailer in excess of 48 feet shall not be operated if the distance between the kingpin and the centerline of the rear axle or the midpoint of a tandem axle of the semi-trailer exceeds 41 feet', consistente con la restriccion a Interstates y autopistas designadas. No se reevaluo la resolucion de alcance (Interstate/rutas designadas) ya tomada por el Coordinador.",
+    "medida_investigacion": "RSA 266:11: \"the distance between the kingpin and the centerline of the rear axle or the midpoint of a tandem axle.\" Definicion condicional (eje unico -> KPRA; tandem -> KCRT), misma estructura que federal/Alabama/Florida. El alcance del proyecto (eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "New Mexico",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "New Mexico Statutes Annotated (NMSA) 1978, Motor Vehicle Code, longitud de vehiculos (via law.justia.com/codes/new-mexico/); tabla federal FHWA Semitrailer Length Limitations by State; Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se confirmo una medida KPRA especifica contra el texto oficial vigente del NMSA. Fuentes secundarias no oficiales (agregadores de la industria) mencionan cifras de 38 a 40 pies de forma inconsistente entre si, sin poder verificarse contra el codigo oficial tras busqueda razonable; se descartan por no poder confirmarse. New Mexico regula la longitud del semirremolque mediante longitud total, sin mencion confirmada de 'kingpin' ni 'rearmost axle' en el texto oficial revisado.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "North Dakota",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "North Dakota Century Code (NDCC) 39-12-04 (via ndlegis.gov); tabla federal FHWA Semitrailer Length Limitations by State; Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA especifica en NDCC 39-12-04 revisado, que regula la longitud del semirremolque mediante longitud total, sin mencion de 'kingpin' ni 'rearmost axle'. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para North Dakota.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Oklahoma",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Oklahoma Statutes Title 47, Section 47-14-103 (via oscn.net/applications/oscn/index.asp); tabla federal FHWA Semitrailer Length Limitations by State; Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA especifica en 47 O.S. Sec. 14-103 revisado, que regula la longitud del semirremolque mediante longitud total, sin mencion de 'kingpin' ni 'rearmost axle'. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para Oklahoma.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Oregon",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Oregon Revised Statutes Chapter 818 (https://www.oregonlegislature.gov/bills_laws/ors/ors818.html); Oregon Department of Transportation, Legal Vehicle Dimensions (https://www.oregon.gov/odot/mct/pages/legal-vehicle-dimensions.aspx); Oregon Administrative Rules OAR 734-073 (https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=322401); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA/KCRT especifica en Oregon Revised Statutes Chapter 818 (que regula la longitud del semirremolque mediante longitud total: 60 pies maximo para combinaciones, sin mencion de 'kingpin' ni 'rearmost axle'). Se reviso el sitio oficial de ODOT Legal Vehicle Dimensions y regulaciones administrativas (OAR 734-073) sin encontrar medida KPRA codificada. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para Oregon.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Rhode Island",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Rhode Island General Laws Title 31, Chapter 31-25, Section 31-25-6 (https://law.justia.com/codes/rhode-island/title-31/chapter-31-25/section-31-25-6/); Rhode Island Administrative Rules 290-RICR-40-00-1.8 (https://www.law.cornell.edu/regulations/rhode-island/290-RICR-40-00-1.8); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA/KCRT especifica en Rhode Island General Laws Sec. 31-25-6 (que regula la longitud del semirremolque mediante longitud total: hasta 53 pies, sin mencion de 'kingpin' ni 'rearmost axle'). Se revisaron regulaciones administrativas (290-RICR-40-00-1.8) sin encontrar medida KPRA codificada. Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para Rhode Island.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "South Carolina",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de 53 pies de longitud: hasta 41 pies KPRA (caso general)"
+    ],
+    "limite_especifico": "41 pies (caso general)",
+    "fuente": "South Carolina Code of Laws Title 56, Chapter 5, Section 56-5-4070 (https://law.justia.com/codes/south-carolina/title-56/chapter-5/section-56-5-4070/)",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "verificado",
+    "nota": "South Carolina Code Sec. 56-5-4070 especifica explicitamente: 'la distancia entre el kingpin del vehiculo y el centro del eje trasero o el centro del ensamble de ejes tandem si esta equipado con dos ejes, no sera mayor de 41 pies'. El semirremolque debe estar equipado con un protector contra el golpe trasero.",
+    "requiere_revision": false,
+    "motivo_revision": "South Carolina Code Sec. 56-5-4070 contiene una excepcion: semirremolques o remolques usados exclusiva o principalmente para transportar vehiculos usados en eventos de competencia de motorsports pueden tener una distancia kingpin-eje trasero de hasta 46 pies. Esta excepcion esta fuera del alcance del proyecto (Dry Van/Reefer 53', no motorsports).",
+    "resolucion_coordinador": "Se conserva unicamente el limite general (41 pies). La excepcion de 46 pies para motorsports queda fuera del alcance del proyecto, mismo criterio ya aplicado a FL/PA/NC/NJ/TN/AL/KY/MD/NH.",
+    "segunda_fuente_auditor": "South Carolina Legislature Online (scstatehouse.gov), texto de la ley promulgada 2015-2016 Bill 4932 que enmendo Sec. 56-5-4070(A)(1) (https://www.scstatehouse.gov/sess121_2015-2016/prever/4932_20160323.htm) - portal oficial de la Asamblea General de Carolina del Sur, distinto de law.justia.com citado por el Investigador.",
+    "fecha_auditoria": "2026-09-18",
+    "resultado_auditoria": "La segunda fuente (South Carolina Legislature Online, texto de la ley promulgada que introdujo esta disposicion en el Codigo) coincide con el dato registrado: 'the distance between the kingpin of the vehicle and the center of the rear axle assembly or to the center of the tandem axle assembly if equipped with two axles may be no greater than forty-one feet', para el caso general de semirremolques de 53 pies, con la misma excepcion textual de 46 pies para motorsports ya documentada y resuelta por el Coordinador (no se reevalua esa resolucion de alcance).",
+    "medida_investigacion": "South Carolina Code Sec. 56-5-4070: \"the distance between the kingpin of the vehicle and the center of the rear axle or the center of the tandem axle assembly if equipped with two axles may be no greater than forty-one feet.\" Definicion condicional (eje unico -> KPRA; tandem -> KCRT). El alcance del proyecto (eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "South Dakota",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "South Dakota Codified Law 32-22-8.1 (https://law.justia.com/codes/south-dakota/title-32/chapter-22/section-32-22-8-1/); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA/KCRT especifica en South Dakota Codified Law 32-22-8.1 (que regula la longitud del semirremolque mediante longitud total: 53 pies maximo en Interstates y rutas designadas, sin mencion de 'kingpin' ni 'rearmost axle'). Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para South Dakota.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Utah",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Utah Code Title 72, Transportation Code, Section 72-7-402 (https://law.justia.com/codes/utah/title-72/chapter-7/part-4/section-402/); Utah Administrative Code R909-2-4 (https://law.cornell.edu/regulations/utah/Utah-Admin-Code-R909-2-4); Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "No se encontro una medida KPRA/KCRT especifica en Utah Code Sec. 72-7-402 ni en Utah Admin. Code R909-2-4 (que regulan la longitud del semirremolque mediante longitud total: 53 pies maximo, sin mencion de 'kingpin' ni 'rearmost axle'). Busqueda razonable realizada sin encontrar fuente oficial que use la medida KPRA/KCRT para Utah.",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Vermont",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de 53 pies: hasta 41 pies KPRA (caso general)"
+    ],
+    "limite_especifico": "41 pies (kingpin al centro del grupo de ejes traseros)",
+    "fuente": "Vermont Statutes Title 23, Sec. 1432 (https://legislature.vermont.gov/statutes/section/23/013/01432)",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "fuente_unica": true,
+    "nota": "Regulacion clara, medida tomada al centro del axle group mas posterior. Sin excepcion de tipo de carga encontrada.",
+    "requiere_revision": false,
+    "fecha_auditoria": "2026-09-18",
+    "resultado_auditoria": "Se intento localizar una segunda fuente oficial independiente distinta de legislature.vermont.gov (citada por el Investigador): Justia (law.justia.com/codes/vermont/title-23/chapter-13/section-1432/) devolvio error HTTP 403; el PDF oficial de Vermont DMV/VTrans 'CVO-110 Oversize Permit Rules' (dmv.vermont.gov/sites/dmv/files/documents/CVO-110-Oversize_Permit_Rules.pdf) no pudo decodificarse como texto legible; la pagina HTML de Vermont DMV 'Permitting Rules' (dmv.vermont.gov/CVO/permits/rules) no menciona la medida kingpin especifica; y 23 CFR Appendix B to Part 658 (Grandfathered Semitrailer Lengths, via Cornell LII) no incluye nota alguna para Vermont (aparece solo como '48-0' sin excepcion de kingpin, a diferencia de California/Indiana/Wisconsin que si tienen notas al pie). Tras busqueda razonable, no se encontro una segunda fuente oficial independiente y accesible que confirme o contradiga el dato; se mantiene 'alta' con fuente_unica.",
+    "medida_investigacion": "23 V.S.A. Sec. 1432: \"the distance between the kingpin of the semitrailer to the center of the rearmost axle group shall not exceed 41 feet.\" Nota de correccion del Coordinador (2026-09-18): el Investigador cito este texto correctamente pero lo etiqueto por error como \"KPRA\"; el texto dice \"center of the... axle group\" (centro de un GRUPO de ejes), que por definicion del proyecto es KCRT, no KPRA. Se aplica KCRT basandose en la cita textual, no en la conclusion original del agente."
+  },
+  {
+    "estado": "Washington",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de mas de 48 pies operando en la National Network (NN) federal: hasta 41 pies KPRA (piso federal minimo, 23 CFR 658.19)"
+    ],
+    "limite_especifico": "41 pies (piso federal minimo aplicable en la National Network)",
+    "fuente": "Revised Code of Washington (RCW) 46.44.030, 46.44.037 (sin mencion KPRA especifica); referencia federal 23 CFR 658.19; Piso federal aplicado por decision del usuario (2026-09-18): 23 CFR Sec. 658.19 (Federal-Aid Highway Act / STAA minimum length requirements, National Network) y FHWA Comprehensive Truck Size and Weight Limits summary (ops.fhwa.dot.gov).",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "nota": "Este estado no tiene medida KPRA propia codificada a nivel estatal (ver 'nota_investigacion_estatal_original' para el detalle de la busqueda del Investigador). Por decision del usuario, se aplica el piso federal minimo de 41 pies KPRA (23 CFR 658.19), vigente en la National Network para semirremolques de hasta 53 pies. No es un dato investigado individualmente por el Investigador ni verificado por el Auditor con segunda fuente especifica del estado; es una aplicacion uniforme de la regla federal, registrada como decision en data/pendientes_arbitraje.json (2026-09-18).",
+    "requiere_revision": false,
+    "fuente_unica": true,
+    "nota_investigacion_estatal_original": "El codigo estatal RCW 46.44 no establece un limite KPRA especifico; solo regula longitud total de semirremolque (53 pies). El Investigador senala que Washington podria adoptar de facto el piso federal de 41 pies (23 CFR 658.19, aplicable en la National Network) sin codificarlo a nivel estatal, pero esto no se pudo confirmar como regulacion estatal propia tras busqueda razonable. Se registra como 'no encontrado' consistente con el resto de estados sin medida KPRA codificada a nivel estatal; ver pendientes_arbitraje.json sobre la pregunta metodologica mas amplia (piso federal 41' para estados sin dato estatal).",
+    "resolucion_coordinador_final": "Por decision del usuario (2026-09-18), se aplica el piso federal de 41 pies KPRA (23 CFR 658.19) a este estado, ya que no se encontro medida KPRA propia a nivel estatal. Aplica en la National Network (rutas federales designadas), consistente con el alcance OTR del proyecto (mismo tratamiento de restriccion de red vial ya usado para otros estados: NY, Indiana, Connecticut, Minnesota, Alabama, Maryland, New Hampshire, Wisconsin).",
+    "medida_investigacion": "23 CFR Sec. 658.19: \"measured from the kingpin to the center of the rear axle, if single, or the center of a group of rear axles.\" Definicion condicional segun configuracion de eje: eje unico -> KPRA: eje tandem/grupo -> KCRT. El alcance del proyecto (Dry Van/Reefer 53', eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "West Virginia",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de 53 pies, caso general: hasta 41 pies KCRT"
+    ],
+    "limite_especifico": "41 pies (caso general)",
+    "fuente": "West Virginia Code Sec. 17C-17-4 (https://code.wvlegislature.gov/17C-17-4/)",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "verificado",
+    "nota": "El dato original (37 pies, espaciamiento tractor-remolque) media un concepto distinto a KPRA/KCRT y no era comparable con el resto del dataset (ver 'dato_original_no_clasificable'). Por decision del usuario (2026-09-18), se registra el caso general del proyecto (41 pies KCRT) en su lugar.",
+    "requiere_revision": false,
+    "segunda_fuente_auditor": "West Virginia Department of Transportation (WV DOT), Legal Size and Weight Limits (https://transportation.wv.gov/legal-size-and-weight-limits) - agencia estatal distinta del portal legislativo code.wvlegislature.gov citado por el Investigador.",
+    "fecha_auditoria": "2026-09-18",
+    "resultado_auditoria": "La segunda fuente (WV DOT) coincide con el dato registrado: 'Semitrailer (measurement from tractor rear axle to trailer first axle cannot exceed 37 feet)', confirmando el limite de 37 pies como condicion para habilitar el semirremolque de 53 pies, consistente con WV Code Sec. 17C-17-4.",
+    "medida_investigacion": "Por decision del usuario (2026-09-18), se descarta el valor original de 37 pies (concepto de medicion distinto, no comparable) y se asigna 41 pies KCRT, caso general del proyecto -- mismo tratamiento aplicado a Wyoming.",
+    "dato_original_no_clasificable": {
+      "limite_especifico": "37 pies (limite para habilitar semirremolque de 53 pies; caso general)",
+      "configuraciones_permitidas": [
+        "Semirremolque de 53 pies: permitido si el espaciamiento kingpin-eje no excede 37 pies; si lo excede, el semirremolque queda limitado a 48 pies"
+      ],
+      "fuente": "West Virginia Code Sec. 17C-17-4 (https://code.wvlegislature.gov/17C-17-4/)",
+      "medida_investigacion": "WV Code Sec. 17C-17-4: \"semitrailers have an axle spacing of not more than thirty-seven feet between the rear axle of the truck tractor and the front axle of the semitrailer.\" Esta medicion es un concepto DISTINTO a KPRA/KCRT: no mide desde el kingpin hasta un eje/grupo de ejes TRASERO del semirremolque, sino el espaciamiento entre el eje trasero del TRACTOR y el eje delantero del semirremolque. Por decision del usuario (2026-09-18), se marca \"medida\": \"N/A\" -- no es clasificable como KPRA ni KCRT segun las definiciones de este proyecto. El dato de 37 pies (limite_especifico) se mantiene sin cambios, solo se documenta que no aplica esta clasificacion.",
+      "motivo_descarte": "El valor de 37 pies (WV Code Sec. 17C-17-4, verificado por segunda fuente WV DOT) es real y esta bien confirmado, pero mide un concepto DISTINTO a KPRA/KCRT: espaciamiento entre el eje trasero del TRACTOR y el eje delantero del SEMIRREMOLQUE, no distancia kingpin-a-eje-trasero-del-semirremolque. No es comparable numericamente con el resto del dataset. Por decision del usuario (2026-09-18), se descarta para efectos de clasificacion/agrupacion del proyecto y se asigna el caso general (41 pies KCRT), mismo tratamiento aplicado a Wyoming."
+    },
+    "resolucion_coordinador": "SUPERADA por decision del usuario (2026-09-18): se descarta el valor de 37 pies (concepto no comparable, ver dato_original_no_clasificable) y se asigna 41 pies KCRT, caso general del proyecto."
+  },
+  {
+    "estado": "Wisconsin",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de 53 pies en combinacion de 2 vehiculos, en rutas designadas: hasta 43 pies KPRA (caso general)"
+    ],
+    "limite_especifico": "43 pies (en rutas designadas)",
+    "fuente": "Wisconsin Statute 348.07(2)(gr) y 348.07(2)(gv) (https://docs.legis.wisconsin.gov/statutes/statutes/348/ii/07/4m)",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "verificado",
+    "nota": "Aplica a semirremolques en combinacion de 2 vehiculos operando en rutas designadas; medida desde kingpin a punto intermedio entre primer y ultimo eje (tandem) o al centro del eje mas posterior (eje sencillo).",
+    "requiere_revision": false,
+    "motivo_revision": "El limite de 43 pies aplica solo en rutas designadas por el estado. Mismo patron ya resuelto para NY/Indiana/Connecticut/Minnesota/Alabama/Maryland/New Hampshire (restriccion de red vial, no de tipo de carga).",
+    "resolucion_coordinador": "Se conserva el limite de 43 pies en rutas designadas, aplicando la misma regla ya usada para el resto de estados con restriccion de red (alcance OTR en rutas primarias). Nota del Auditor: esta resolucion de alcance (red de rutas designadas) no se reabre; el conflicto reportado abajo es sobre el valor numerico, no sobre el alcance.",
+    "fecha_auditoria": "2026-09-18",
+    "segunda_fuente_auditor": "23 CFR Appendix B to Part 658, 'Grandfathered Semitrailer Lengths', reproducido en Cornell Law School Legal Information Institute (https://www.law.cornell.edu/cfr/text/23/appendix-B_to_part_658) - fuente federal oficial, distinta del portal legislativo estatal docs.legis.wisconsin.gov citado por el Investigador.",
+    "resultado_auditoria": "Se intentaron multiples fuentes adicionales antes de esta: el PDF oficial de WisDOT 'Motor Vehicle Size Regulation Summary' (wisconsindot.gov/Documents/formdocs/sp4415.pdf) y el codigo administrativo Trans 276 (docs.legis.wisconsin.gov/code/register/2007/618b/insert/trans276 y docs.legis.wisconsin.gov/code/admin_code/trans/276.pdf) no pudieron decodificarse como texto legible; FindLaw (codes.findlaw.com/wi/...) y Onecle (law.onecle.com/wisconsin/348/348.07.html) devolvieron error 404. La unica segunda fuente oficial independiente accesible fue 23 CFR Appendix B to Part 658 (tabla federal de longitudes de semirremolque 'grandfathered' por estado, via Cornell LII), cuya nota al pie 3 para Wisconsin establece: 'Semitrailers up to 53 feet in length may operate without a permit by conforming to a kingpin-to-rear axle distance of 41 feet, measured to the center of the rear tandem assembly.' Esto CONTRADICE el dato registrado por el Investigador (43 pies, citando Wis. Stat. 348.07(2)(gr)/(gv)). Nota del Auditor: esta misma tabla federal (23 CFR Appendix B) tambien muestra cifras distintas a las ya verificadas para California (38' vs. dato verificado de 40'/38') e Indiana (40'6\" vs. dato verificado de 43'), lo que sugiere que se trata de una tabla historica de longitudes 'grandfathered' (pre-ISTEA 1991) que puede no reflejar enmiendas estatales posteriores (patron similar al caso de Iowa, donde una cifra historica/derogada diferia del texto vigente). No se resuelve aqui cual cifra debe prevalecer para Wisconsin (43' segun el estatuto vigente citado por el Investigador, vs. 41' segun la tabla federal historica); se reporta al Coordinador para arbitraje, sin cambiar el limite_especifico registrado.",
+    "resolucion_coordinador_final": "El usuario decidio (2026-09-18) confiar en el estatuto estatal vigente (43 pies, Wis. Stat. 348.07(2)(gr)/(gv)), tratando la tabla federal 23 CFR Appendix B como historica/desactualizada -- mismo criterio aplicado a Iowa, reforzado aqui porque esa misma tabla tambien contradice los datos ya verificados de California e Indiana. Confianza actualizada a 'verificado'.",
+    "conflicto_detalle": {
+      "version_investigador": "43 pies KPRA (kingpin al punto medio del grupo de ejes traseros tandem, o al centro del eje mas posterior si es eje sencillo), en rutas designadas, citando Wis. Stat. 348.07(2)(gr)/(gv), verificado directamente contra el texto vigente en docs.legis.wisconsin.gov.",
+      "version_auditor": "41 pies KPRA (medido al centro del ensamble de eje tandem trasero), segun 23 CFR Appendix B to Part 658 (tabla federal de longitudes 'grandfathered', footnote 3 para Wisconsin), reproducida en Cornell LII. Posible fuente desactualizada (tabla historica anterior a enmiendas estatales), sin fecha de vigencia confirmada por el Auditor; no se pudo acceder a una fuente WisDOT actual legible para dirimir la discrepancia."
+    },
+    "medida_investigacion": "Wis. Stat. 348.07(2)(gr)/(gv): caso tandem \"from the kingpin to a point midway between the first and last axles of the tandem axle\" (KCRT); caso eje individual \"from the kingpin to the center of the rearmost axle\" (KPRA). Definicion condicional. El alcance del proyecto (eje tandem estandar) corresponde al caso KCRT."
+  },
+  {
+    "estado": "Wyoming",
+    "medida": "KCRT",
+    "configuraciones_permitidas": [
+      "Semirremolque de 53 pies, caso general: hasta 41 pies KCRT"
+    ],
+    "limite_especifico": "41 pies (caso general)",
+    "fuente": "No se pudo confirmar un valor KPRA/KCRT propio de Wyoming contra texto estatal legible (ver 'dato_original_no_confirmado'). Por decision del usuario (2026-09-18), se registra el caso general del proyecto (41 pies KCRT), alineado con el piso federal 23 CFR Sec. 658.19 y con el patron dominante del resto de estados.",
+    "fecha_verificado": "2026-09-18",
+    "confianza": "alta",
+    "fuente_unica": true,
+    "nota": "Dos limites KPRA distintos segun configuracion de eje trasero (tandem vs sencillo); estructura similar a California (40'/38' segun numero de ejes).",
+    "requiere_revision": false,
+    "motivo_revision": "Motivo historico (ya no aplica al dato actual): el limite dependia de la configuracion de eje trasero (40' tandem / 38' eje sencillo). Se descarto ese dato completo por falta de confirmacion textual; ver 'dato_original_no_confirmado'.",
+    "resolucion_coordinador": "SUPERADA por decision del usuario (2026-09-18): se descarta el valor 40'/38' por falta de confirmacion textual estatal y se deja Wyoming en 41 pies KCRT, caso general del proyecto (mismo tratamiento que los estados sin medida propia confirmada).",
+    "fecha_auditoria": "2026-09-18",
+    "resultado_auditoria": "Se intento localizar una segunda fuente oficial independiente distinta de law.justia.com (citada por el Investigador): FindLaw (codes.findlaw.com/wy/title-31-motor-vehicles/wy-st-sect-31-18-802.html) cargo pero no reprodujo el texto con la medida kingpin especifica; Onecle (law.onecle.com/wyoming/motor-vehicles/31-18-802.html) devolvio error 404; el PDF de investigacion legislativa de WyoLeg (wyoleg.gov/LSOResearch/2024/24FS014...pdf) y el informe federal FHWA 'Federal Size Regulations for Commercial Motor Vehicles' (ops.fhwa.dot.gov/freight/publications/size_regs_final_rpt/size_regs_final_rpt.pdf) no pudieron decodificarse como texto legible; la pagina de permisos de WYDOT (dot.state.wy.us/home/trucking_commercial_vehicles/commercial_permits.html) no menciona la medida; y 23 CFR Appendix B to Part 658 (Grandfathered Semitrailer Lengths, via Cornell LII) no incluye nota alguna para Wyoming (aparece solo como '57-4' sin excepcion de kingpin). Tras busqueda razonable, no se encontro una segunda fuente oficial independiente y accesible que confirme o contradiga el dato; se mantiene 'alta' con fuente_unica.",
+    "dato_original_no_confirmado": {
+      "limite_especifico": "40 pies (eje tandem, caso general)",
+      "configuraciones_permitidas": [
+        "Semirremolque de 53 pies, eje trasero tandem: hasta 40 pies KPRA (caso general)",
+        "Semirremolque de 53 pies, eje trasero sencillo: hasta 38 pies KPRA"
+      ],
+      "fuente": "Wyoming Statute 31-18-802 (https://law.justia.com/codes/wyoming/2025/title-31/chapter-18/article-8/section-31-18-802/)",
+      "motivo_descarte": "El valor original (40' tandem / 38' eje sencillo, citando Wyoming Statute 31-18-802 via Justia) no pudo confirmarse tras dos rondas de investigacion adicional: (1) el Auditor no encontro segunda fuente oficial (FindLaw sin el texto, Onecle 404, PDFs de WyoLeg/FHWA no legibles, 23 CFR App. B sin nota para Wyoming); (2) la investigacion de medicion KPRA/KCRT encontro que el propio texto de 31-18-802 NO contiene los valores 40'/38' en absoluto (solo regula longitud total), y los PDFs oficiales de WYDOT que podrian contenerlos no se pudieron decodificar tras multiples estrategias (cache de Google, Wayback Machine, busqueda de fragmentos indexados, Wyoming Administrative Rules Search). Los valores 40'/38' solo aparecen en fuentes secundarias no oficiales (agregadores de la industria) sin citar seccion exacta."
+    },
+    "medida_investigacion": "Por decision del usuario (2026-09-18), tras agotar la investigacion sin poder confirmar el texto estatal de 40'/38', se descarta ese valor y se deja Wyoming en 41 pies KCRT (caso general del proyecto)."
+  }
+]
